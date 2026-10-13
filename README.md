@@ -85,7 +85,9 @@ python scripts/query_history.py `
   --output aditya_l1_history.json
 ```
 
-Space-Track 的 `GP` 只提供抓取时的最新根数，因此定时任务只能从启用历史库之日起持续积累。过去的完整元素集需使用仓库中的手动工作流 `Backfill Space-Track history` 分段回溯；同一 `GP_HISTORY` 时间区间不应重复下载。建议先按少量 NORAD 编号和月度时间区间试运行，成功归档后再处理下一批。
+Space-Track 的 `GP` 只提供抓取时的最新根数。仓库从 2026-09 起按完整 UTC 自然月保存 `GP_HISTORY`：每月 1 日 03:35 UTC 自动归档上一个月，例如 2026-10 月归档 `2026-09-01` 至 `2026-09-30`，2026-11 月归档 `2026-10-01` 至 `2026-10-31`。`data/history/gp_history_months.json` 记录已完成月份，重复运行会直接跳过。
+
+更早或指定目标的历史元素集可使用手动工作流 `Backfill Space-Track history` 分段回溯；同一 `GP_HISTORY` 时间区间不应重复下载。建议先按少量 NORAD 编号和月度时间区间试运行，成功归档后再处理下一批。
 
 ## 数据筛选口径
 

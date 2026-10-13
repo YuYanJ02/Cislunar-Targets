@@ -28,6 +28,8 @@ jobs:
       commit_sha: ${{ steps.commit.outputs.commit_sha }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

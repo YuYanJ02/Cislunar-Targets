@@ -4,6 +4,7 @@ import json
 import sys
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
@@ -11,6 +12,7 @@ sys.path.insert(0, str(SCRIPTS))
 
 from archive_history import bill_gray_entries, current_entries  # noqa: E402
 from history_store import HistoryStore, iter_shard  # noqa: E402
+from monthly_spacetrack_history import complete_months  # noqa: E402
 
 
 def sample_catalog(epoch: str = "2026-01-01T00:00:00Z") -> dict:
@@ -38,6 +40,16 @@ def sample_catalog(epoch: str = "2026-01-01T00:00:00Z") -> dict:
 
 
 class HistoryStoreTests(unittest.TestCase):
+    def test_monthly_plan_uses_complete_calendar_months(self) -> None:
+        self.assertEqual(
+            complete_months("2026-09", date(2026, 10, 13), set()),
+            [("2026-09", "2026-09-01", "2026-09-30")],
+        )
+        self.assertEqual(
+            complete_months("2026-09", date(2026, 11, 1), {"2026-09"}),
+            [("2026-10", "2026-10-01", "2026-10-31")],
+        )
+
     def test_append_only_deduplication(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / "history"

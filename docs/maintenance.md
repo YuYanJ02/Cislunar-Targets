@@ -80,6 +80,14 @@ python scripts/query_history.py \
 
 ## Space-Track 历史回溯
 
+`.github/workflows/monthly-spacetrack-history.yml` 在每月 1 日 03:35 UTC 自动运行，并从 `2026-09` 开始归档尚未完成的最早一个完整自然月：
+
+- 2026-10 月运行：`EPOCH = 2026-09-01--2026-09-30`；
+- 2026-11 月运行：`EPOCH = 2026-10-01--2026-10-31`；
+- 后续月份以此类推。
+
+完成状态保存在 `data/history/gp_history_months.json`。每次只处理一个缺失月份，成功写入历史分片并更新状态后才提交；重新运行已完成月份不会访问 `GP_HISTORY`。若某月计划任务失败，可手动重新运行 `Archive monthly Space-Track history`，它会继续处理最早的缺失月份。
+
 `.github/workflows/backfill-history.yml` 只允许手动触发。输入起止时间、逗号分隔的 NORAD 编号，并输入 `ARCHIVE_ONCE` 确认。若 NORAD 留空，工作流会处理当前目录中的所有目标，数据量可能很大。
 
 回溯应遵守以下规则：

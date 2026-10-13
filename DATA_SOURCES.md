@@ -36,7 +36,7 @@ https://www.space-track.org/basicspacedata/query/class/gp/OBJECT_TYPE/PAYLOAD/LA
 
 若结果来自某次固定导出，应同时记录查询 URL、访问日期、目录生成时间和每条记录的 `epoch_utc`。本项目记录中的 `source_url`、`retrieved_at_utc` 或 `last_verified_utc` 字段可用于复现引用。
 
-历史库从每日 `GP` 快照持续积累，不能保证包含两个抓取时刻之间发布的每个元素集。通过 `GP_HISTORY` 补齐的分片会保留实际查询区间和获取时间；历史产品按 Space-Track 的 API 指南下载后在本仓库中留存，不重复抓取同一区间。
+历史库从每日 `GP` 快照持续积累，并从 2026-09 起于每月月初归档上一个完整 UTC 自然月的 `GP_HISTORY`。月度完成状态、实际查询区间和获取时间会随分片保留；历史产品按 Space-Track 的 API 指南下载后在本仓库中留存，已完成月份不会再次抓取。
 
 ## 2. Bill Gray 高轨目标根数
 

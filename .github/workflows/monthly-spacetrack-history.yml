@@ -1,0 +1,56 @@
+name: Archive monthly Space-Track history
+
+# On the first day of each month, archive the previous complete UTC calendar month.
+# The initial code push also fills the first due month (2026-09).
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "35 3 1 * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/monthly-spacetrack-history.yml"
+      - "scripts/monthly_spacetrack_history.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalog-write
+  cancel-in-progress: false
+
+jobs:
+  archive-month:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Archive oldest complete missing month
+        env:
+          SPACETRACK_USERNAME: ${{ secrets.SPACETRACK_USERNAME }}
+          SPACETRACK_PASSWORD: ${{ secrets.SPACETRACK_PASSWORD }}
+        run: >-
+          python scripts/monthly_spacetrack_history.py
+          --catalog public/data/catalog.json
+          --history-root data/history
+          --start-month 2026-09
+      - name: Validate history
+        run: python scripts/validate_history.py data/history --recent 5
+      - name: Commit monthly history
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history
+          if ! git diff --cached --quiet; then
+            git commit -m "data: archive monthly Space-Track history"
+            git push
+          fi
+
