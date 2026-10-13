@@ -33,7 +33,7 @@ class WebHistoryTests(unittest.TestCase):
             ])
             store.commit()
             (root / "gp_history_months.json").write_text(
-                json.dumps({"completed": [{"month": "2026-09"}]}), encoding="utf-8"
+                json.dumps({"months": [{"month": "2026-09", "status": "complete"}]}), encoding="utf-8"
             )
 
             index = build_web_history(root, output, bucket_count=4)

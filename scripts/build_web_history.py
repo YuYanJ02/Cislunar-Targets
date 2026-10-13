@@ -26,10 +26,13 @@ def load_completed_months(history_root: Path) -> set[str]:
     if not path.exists():
         return set()
     payload = json.loads(path.read_text(encoding="utf-8"))
+    rows = payload.get("months", payload.get("completed", []))
     return {
         str(item.get("month"))
-        for item in payload.get("completed", [])
-        if isinstance(item, dict) and item.get("month")
+        for item in rows
+        if isinstance(item, dict)
+        and item.get("month")
+        and item.get("status", "complete") == "complete"
     }
 
 
