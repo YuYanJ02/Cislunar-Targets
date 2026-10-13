@@ -37,6 +37,12 @@ function number(value, digits = 1) {
     : "—";
 }
 
+function scientific(value, digits = 8) {
+  if (value === null || value === undefined || value === "") return "—";
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed.toExponential(digits) : "—";
+}
+
 function dateText(value, withTime = false) {
   if (!value) return "—";
   const date = new Date(value);
@@ -200,22 +206,50 @@ function makeSourceCard(source) {
   freshBadge.classList.add(fresh.key);
 
   const orbit = source.orbit || {};
-  const fields = [
-    ["历元 UTC", dateText(orbit.epoch_utc, true)],
-    ["半长轴 km", number(orbit.semi_major_axis_km, 3)],
-    ["周期 day", number(orbit.period_days, 6)],
-    ["偏心率", number(orbit.eccentricity, 7)],
-    ["倾角 deg", number(orbit.inclination_deg, 4)],
-    ["RAAN deg", number(orbit.raan_deg, 4)],
-    ["近地点高度 km", number(orbit.perigee_altitude_km, 1)],
-    ["远地点高度 km", number(orbit.apogee_altitude_km, 1)],
-    ["历表类型", text(orbit.ephemeris_type)],
+  const fieldGroups = [
+    ["平均轨道根数", [
+      ["历元 UTC", text(orbit.epoch_utc)],
+      ["半长轴 a / km", number(orbit.semi_major_axis_km, 3)],
+      ["偏心率 e", number(orbit.eccentricity, 8)],
+      ["倾角 i / deg", number(orbit.inclination_deg, 6)],
+      ["升交点赤经 Ω / deg", number(orbit.raan_deg, 6)],
+      ["近地点幅角 ω / deg", number(orbit.arg_pericenter_deg, 6)],
+      ["平近点角 M / deg", number(orbit.mean_anomaly_deg, 6)],
+      ["平均运动 n / rev·day⁻¹", number(orbit.mean_motion_rev_day, 10)],
+      ["周期 / day", number(orbit.period_days, 8)],
+    ]],
+    ["传播与目录参数", [
+      ["平均运动一阶导数", scientific(orbit.mean_motion_dot)],
+      ["平均运动二阶导数", scientific(orbit.mean_motion_ddot)],
+      ["BSTAR", scientific(orbit.bstar)],
+      ["近地点高度 / km", number(orbit.perigee_altitude_km, 3)],
+      ["远地点高度 / km", number(orbit.apogee_altitude_km, 3)],
+      ["历元圈次", text(orbit.rev_at_epoch)],
+      ["元素集编号", text(orbit.element_set_no)],
+      ["历表类型", text(orbit.ephemeris_type)],
+      ["GP ID", text(orbit.gp_id)],
+    ]],
+    ["OMM 坐标与生成信息", [
+      ["中心天体", text(orbit.center_name)],
+      ["参考系", text(orbit.ref_frame)],
+      ["时间系统", text(orbit.time_system)],
+      ["平均根数理论", text(orbit.mean_element_theory)],
+      ["CCSDS OMM 版本", text(orbit.ccsds_omm_version)],
+      ["产品生成时间", text(orbit.creation_date_utc)],
+      ["发布机构", text(orbit.originator)],
+    ]],
   ];
   const grid = card.querySelector(".orbit-grid");
-  fields.forEach(([label, value]) => {
-    const field = document.createElement("div"); field.className = "orbit-field";
-    field.innerHTML = `<span>${escapeHtml(label)}</span><strong title="${escapeHtml(value)}">${escapeHtml(value)}</strong>`;
-    grid.appendChild(field);
+  fieldGroups.forEach(([title, fields]) => {
+    const heading = document.createElement("h3");
+    heading.className = "orbit-section-title";
+    heading.textContent = title;
+    grid.appendChild(heading);
+    fields.forEach(([label, value]) => {
+      const field = document.createElement("div"); field.className = "orbit-field";
+      field.innerHTML = `<span>${escapeHtml(label)}</span><strong title="${escapeHtml(value)}">${escapeHtml(value)}</strong>`;
+      grid.appendChild(field);
+    });
   });
   const raw = [orbit.tle_line0, orbit.tle_line1, orbit.tle_line2].filter(Boolean).join("\n") || "当前快照未保存原始根数。下次 API 更新后可补充。";
   card.querySelector("pre").textContent = `${raw}\n\n验证时间: ${text(source.last_verified_utc)}\n文件/版本: ${text(source.bill_gray_file || source.source_commit)}`;

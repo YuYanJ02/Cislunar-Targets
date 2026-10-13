@@ -52,9 +52,22 @@
 | `arg_pericenter_deg` | deg | 近地点幅角 |
 | `mean_anomaly_deg` | deg | 平近点角 |
 | `mean_motion_rev_day` | rev/day | 平均运动 |
+| `mean_motion_dot` | rev/day² | 平均运动一阶导数 |
+| `mean_motion_ddot` | rev/day³ | 平均运动二阶导数 |
+| `bstar` | 1/Earth radii | SGP4 BSTAR 阻力项 |
+| `element_set_no` | — | 元素集编号 |
+| `rev_at_epoch` | rev | 历元时圈次 |
 | `perigee_altitude_km` | km | 近地点高度 |
 | `apogee_altitude_km` | km | 远地点高度 |
 | `ephemeris_type` | — | TLE 历表类型；`H` 为 Bill Gray 扩展状态向量 |
+| `center_name` | — | OMM 中心天体 |
+| `ref_frame` | — | OMM 参考系 |
+| `time_system` | — | OMM 时间系统 |
+| `mean_element_theory` | — | 平均根数理论，例如 SGP4 |
+| `ccsds_omm_version` | — | CCSDS OMM 版本 |
+| `creation_date_utc` | UTC | Space-Track 产品生成时间 |
+| `originator` | — | 产品发布机构 |
+| `gp_id` | — | Space-Track GP 产品编号 |
 | `tle_line0/1/2` | — | 当前原始名称行和元素行 |
 
 缺失数值必须保存为 `null`，页面显示为“—”，不能以 0 代替。
@@ -78,4 +91,3 @@ SEMIMAJOR_AXIS > 42164 km
 - NORAD 缺失但 COSPAR 相同：可合并，但应保留身份可信度。
 - 两者都缺失：保持为独立目标，等待人工审查。
 - 来源轨道不互相覆盖。网页分别展示两个来源，并计算差值。
-

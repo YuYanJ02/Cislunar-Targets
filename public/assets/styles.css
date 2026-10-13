@@ -176,6 +176,8 @@ tbody tr.selected { box-shadow: inset 3px 0 0 var(--cyan); }
 .freshness-badge.aging { color: var(--orange); }
 .freshness-badge.stale { color: var(--red); }
 .orbit-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; }
+.orbit-section-title { grid-column: 1 / -1; margin: 6px 0 1px; padding-top: 10px; border-top: 1px solid rgba(133,176,187,.16); color: #8fb7c1; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.orbit-section-title:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
 .orbit-field { min-width: 0; }
 .orbit-field span { display: block; color: #6e8b95; font-size: 9px; white-space: nowrap; }
 .orbit-field strong { display: block; color: #c6d8dc; font-size: 12px; margin-top: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -221,4 +223,3 @@ tbody tr.selected { box-shadow: inset 3px 0 0 var(--cyan); }
   .orbit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .delta-grid { grid-template-columns: 1fr; }
 }
-
