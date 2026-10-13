@@ -2,11 +2,29 @@
 
 ## 数据层次
 
-仓库保留三个层次的数据：
+仓库保留四个层次的数据：
 
 1. `data/registries/`：人工审查后的 Excel 登记表，是身份、范围和备注的可编辑来源。
 2. `public/data/catalog.json`：供网页直接读取的统一目录，由脚本生成。
-3. Space-Track 和 Bill Gray 的在线源数据：由 GitHub Actions 定期获取，不在源码中保存认证信息。
+3. `data/history/`：只追加、不覆盖的历史根数分片、清单和去重索引。
+4. Space-Track 和 Bill Gray 的在线源数据：由 GitHub Actions 定期获取，不在源码中保存认证信息。
+
+## 历史记录字段
+
+`data/history/shards/YYYY/MM/*.jsonl.gz` 中每行是一条独立历史记录：
+
+| 字段 | 含义 |
+| --- | --- |
+| `schema_version` | 历史记录模式版本 |
+| `recorded_at_utc` | 本仓库获取或归档该记录的时间 |
+| `target_key` | 与当前目录一致的统一目标键 |
+| `name`、`norad_cat_id`、`cospar_id` | 归档时的目标身份信息 |
+| `source` | `spacetrack` 或 `bill_gray` |
+| `source_url`、`source_commit`、`bill_gray_file` | 原始来源追溯信息 |
+| `orbit` | 该历元的完整 OMM/TLE 轨道字段 |
+| `fingerprint` | 去除验证时间后，对来源、目标和轨道内容计算的 SHA-256 |
+
+`manifest.json` 记录各分片的路径、记录数、来源计数、历元范围、压缩前后大小和 SHA-256；`fingerprints.log` 是只追加的全局去重索引。历史分片生成后不得编辑或覆盖，如需修正，应追加更正记录并在文档中说明。
 
 ## 目标级字段
 
@@ -91,3 +109,4 @@ SEMIMAJOR_AXIS > 42164 km
 - NORAD 缺失但 COSPAR 相同：可合并，但应保留身份可信度。
 - 两者都缺失：保持为独立目标，等待人工审查。
 - 来源轨道不互相覆盖。网页分别展示两个来源，并计算差值。
+

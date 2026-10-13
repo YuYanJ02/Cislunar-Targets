@@ -1,0 +1,79 @@
+name: Backfill Space-Track history
+
+# Manual-only workflow. Query each GP_HISTORY interval once, then retain it in the repository.
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_utc:
+        description: "Start of bounded EPOCH interval, e.g. 2025-01-01"
+        required: true
+        type: string
+      end_utc:
+        description: "End of bounded EPOCH interval, e.g. 2025-02-01"
+        required: true
+        type: string
+      norad_ids:
+        description: "Comma-separated current-catalog NORAD IDs; leave empty only for a deliberate all-target run"
+        required: false
+        type: string
+      confirm_once:
+        description: "Type ARCHIVE_ONCE to confirm this interval will not be downloaded repeatedly"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalog-write
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Check explicit confirmation
+        env:
+          CONFIRM_ONCE: ${{ inputs.confirm_once }}
+        run: test "$CONFIRM_ONCE" = "ARCHIVE_ONCE"
+      - name: Download bounded GP_HISTORY interval
+        env:
+          SPACETRACK_USERNAME: ${{ secrets.SPACETRACK_USERNAME }}
+          SPACETRACK_PASSWORD: ${{ secrets.SPACETRACK_PASSWORD }}
+          BACKFILL_START: ${{ inputs.start_utc }}
+          BACKFILL_END: ${{ inputs.end_utc }}
+          BACKFILL_NORADS: ${{ inputs.norad_ids }}
+        shell: bash
+        run: |
+          args=(
+            --catalog public/data/catalog.json
+            --history-root data/history
+            --start "$BACKFILL_START"
+            --end "$BACKFILL_END"
+          )
+          if [ -n "$BACKFILL_NORADS" ]; then
+            args+=(--norad-csv "$BACKFILL_NORADS")
+          else
+            args+=(--all-catalog-targets)
+          fi
+          python scripts/backfill_spacetrack_history.py "${args[@]}"
+      - name: Validate history
+        run: python scripts/validate_history.py data/history --recent 10
+      - name: Commit history shards
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history
+          if ! git diff --cached --quiet; then
+            git commit -m "data: backfill Space-Track orbit history"
+            git push
+          fi
+

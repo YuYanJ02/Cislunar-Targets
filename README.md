@@ -12,6 +12,7 @@
 - 同一目标存在两个来源时显示半长轴、周期和历元差异
 - 导出当前筛选结果为 CSV 或 JSON
 - GitHub Actions 定时刷新 Space-Track GP 和 Bill Gray TLE
+- 按唯一历元追加保存 Space-Track 与 Bill Gray 历史根数，不覆盖旧记录
 - 保留数据来源、抓取时间、源文件与提交版本
 
 ## 仓库结构
@@ -23,6 +24,7 @@
 │  ├─ assets/                    页面样式与交互
 │  └─ data/catalog.json          统一后的当前目录
 ├─ data/registries/              可下载的 Excel 登记表与模板
+├─ data/history/                 压缩的追加式轨道历史分片与索引
 ├─ docs/                         数据说明、维护方法与 API 指南
 ├─ scripts/                      导入、更新和校验脚本
 └─ .github/workflows/            自动更新与 Pages 部署工作流
@@ -66,7 +68,24 @@ python scripts/import_registry.py `
 
 工作流默认每天 02:15 UTC 运行。若未配置 Space-Track Secrets，任务仍会更新 Bill Gray 数据，但会保留现有 Space-Track 快照。
 
+每次成功刷新后，脚本会按“来源 + 目标 + 轨道内容”生成 SHA-256 指纹，只把未出现过的历元追加到 `data/history/shards/`。首次运行还会读取目标对应的 Bill Gray 文件及其历史版本文件中的全部 TLE 对。历史分片使用 `JSONL.gz`，已生成的分片不再修改。
+
 Secrets 只提供给 GitHub Actions 运行环境。不要把 Space-Track 用户名、密码、会话 Cookie 或 API 返回的认证信息写入源码、JSON、Excel 或工作流日志。
+
+## 历史库查询与回溯
+
+按 NORAD、来源和历元范围查询：
+
+```powershell
+python scripts/query_history.py `
+  --history-root data/history `
+  --norad 57754 `
+  --source spacetrack `
+  --start 2023-01-01 `
+  --output aditya_l1_history.json
+```
+
+Space-Track 的 `GP` 只提供抓取时的最新根数，因此定时任务只能从启用历史库之日起持续积累。过去的完整元素集需使用仓库中的手动工作流 `Backfill Space-Track history` 分段回溯；同一 `GP_HISTORY` 时间区间不应重复下载。建议先按少量 NORAD 编号和月度时间区间试运行，成功归档后再处理下一批。
 
 ## 数据筛选口径
 

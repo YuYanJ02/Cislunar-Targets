@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths-ignore:
       - "public/data/catalog.json"
+      - "data/history/**"
 
 permissions:
   contents: write
@@ -17,7 +18,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: catalog-write
   cancel-in-progress: false
 
 jobs:
@@ -45,13 +46,21 @@ jobs:
           --output public/data/catalog.json
       - name: Validate catalog
         run: python scripts/validate_catalog.py public/data/catalog.json
+      - name: Append unseen orbit epochs to history
+        run: >-
+          python scripts/archive_history.py
+          --catalog public/data/catalog.json
+          --bill-gray-dir .cache/bill-gray-tles
+          --history-root data/history
+      - name: Validate history
+        run: python scripts/validate_history.py data/history --recent 5
       - name: Commit data changes
         id: commit
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/catalog.json
+          git add public/data/catalog.json data/history
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh orbital catalogs"
             git push
@@ -72,3 +81,4 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
