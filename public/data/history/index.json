@@ -1,0 +1,1032 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at_utc": "2026-10-13T13:20:28.529377Z",
+  "bucket_count": 64,
+  "completed_spacetrack_months": [],
+  "target_count": 31,
+  "record_count": 28360,
+  "skipped_record_count": 0,
+  "targets": {
+    "COSPAR:2019-042A": {
+      "name": "19042a",
+      "norad_cat_id": null,
+      "cospar_id": "2019-042A",
+      "count": 103,
+      "earliest_epoch_utc": "2019-07-22T14:58:50.816064Z",
+      "latest_epoch_utc": "2019-08-17T02:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 103
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2019/bucket-09.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 103
+        }
+      ]
+    },
+    "COSPAR:2022-168B": {
+      "name": "Lunar Flashlight",
+      "norad_cat_id": null,
+      "cospar_id": "2022-168B",
+      "count": 101,
+      "earliest_epoch_utc": "2022-12-11T11:58:50.816064Z",
+      "latest_epoch_utc": "2023-03-20T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 101
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2022/bucket-03.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 21
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-03.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 80
+        }
+      ]
+    },
+    "COSPAR:2026-069A": {
+      "name": "Artemis II",
+      "norad_cat_id": null,
+      "cospar_id": "2026-069A",
+      "count": 80,
+      "earliest_epoch_utc": "2026-04-02T23:58:50.816064Z",
+      "latest_epoch_utc": "2026-04-10T19:10:50.816928Z",
+      "source_counts": {
+        "bill_gray": 80
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2026/bucket-13.json.gz",
+          "source": "bill_gray",
+          "period": "2026",
+          "count": 80
+        }
+      ]
+    },
+    "NORAD:27540": {
+      "name": "INTEGRAL",
+      "norad_cat_id": "27540",
+      "cospar_id": "2002-048A",
+      "count": 1434,
+      "earliest_epoch_utc": "2016-01-01T11:58:51.815712Z",
+      "latest_epoch_utc": "2025-12-31T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 1434
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2016/bucket-55.json.gz",
+          "source": "bill_gray",
+          "period": "2016",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2018/bucket-55.json.gz",
+          "source": "bill_gray",
+          "period": "2018",
+          "count": 184
+        },
+        {
+          "path": "chunks/bill_gray/2019/bucket-55.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 426
+        },
+        {
+          "path": "chunks/bill_gray/2020/bucket-55.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-55.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 92
+        }
+      ]
+    },
+    "NORAD:30580": {
+      "name": "THEMIS A",
+      "norad_cat_id": "30580",
+      "cospar_id": "2007-004A",
+      "count": 1216,
+      "earliest_epoch_utc": "2019-01-23T11:58:50.816064Z",
+      "latest_epoch_utc": "2022-05-22T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 1216
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2019/bucket-31.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 343
+        },
+        {
+          "path": "chunks/bill_gray/2020/bucket-31.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-31.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-31.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 142
+        }
+      ]
+    },
+    "NORAD:30797": {
+      "name": "THEMIS D",
+      "norad_cat_id": "30797",
+      "cospar_id": "2007-004D",
+      "count": 1337,
+      "earliest_epoch_utc": "2017-12-01T11:58:50.816064Z",
+      "latest_epoch_utc": "2022-05-22T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 1337
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2017/bucket-12.json.gz",
+          "source": "bill_gray",
+          "period": "2017",
+          "count": 31
+        },
+        {
+          "path": "chunks/bill_gray/2018/bucket-12.json.gz",
+          "source": "bill_gray",
+          "period": "2018",
+          "count": 90
+        },
+        {
+          "path": "chunks/bill_gray/2019/bucket-12.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 343
+        },
+        {
+          "path": "chunks/bill_gray/2020/bucket-12.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-12.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-12.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 142
+        }
+      ]
+    },
+    "NORAD:30798": {
+      "name": "THEMIS E",
+      "norad_cat_id": "30798",
+      "cospar_id": "2007-004E",
+      "count": 1216,
+      "earliest_epoch_utc": "2019-01-23T11:58:50.816064Z",
+      "latest_epoch_utc": "2022-05-22T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 1216
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2019/bucket-34.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 343
+        },
+        {
+          "path": "chunks/bill_gray/2020/bucket-34.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-34.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-34.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 142
+        }
+      ]
+    },
+    "NORAD:33401": {
+      "name": "IBEX",
+      "norad_cat_id": "33401",
+      "cospar_id": "2008-051A",
+      "count": 3287,
+      "earliest_epoch_utc": "2016-01-01T11:58:51.815712Z",
+      "latest_epoch_utc": "2025-12-31T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 3287
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2016/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2016",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2017/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2017",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2018/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2018",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2019/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-07.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        }
+      ]
+    },
+    "NORAD:37755": {
+      "name": "SPEKTR R",
+      "norad_cat_id": "37755",
+      "cospar_id": "2011-037A",
+      "count": 6128,
+      "earliest_epoch_utc": "2011-07-18T11:58:53.815872Z",
+      "latest_epoch_utc": "2025-12-31T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 6128
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2011/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2011",
+          "count": 167
+        },
+        {
+          "path": "chunks/bill_gray/2012/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2012",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2013/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2013",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2014/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2014",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2015/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2015",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2016/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2016",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2017/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2017",
+          "count": 730
+        },
+        {
+          "path": "chunks/bill_gray/2018/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2018",
+          "count": 730
+        },
+        {
+          "path": "chunks/bill_gray/2019/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 482
+        },
+        {
+          "path": "chunks/bill_gray/2020/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-51.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        }
+      ]
+    },
+    "NORAD:43435": {
+      "name": "TESS",
+      "norad_cat_id": "43435",
+      "cospar_id": "2018-038A",
+      "count": 2814,
+      "earliest_epoch_utc": "2018-04-19T11:58:50.816064Z",
+      "latest_epoch_utc": "2025-12-31T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 2814
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2018/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2018",
+          "count": 257
+        },
+        {
+          "path": "chunks/bill_gray/2019/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2020/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        }
+      ]
+    },
+    "NORAD:43470": {
+      "name": "Queqiao",
+      "norad_cat_id": "43470",
+      "cospar_id": "2018-045A",
+      "count": 4,
+      "earliest_epoch_utc": "2018-05-21T11:58:50.816064Z",
+      "latest_epoch_utc": "2018-05-24T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 4
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2018/bucket-39.json.gz",
+          "source": "bill_gray",
+          "period": "2018",
+          "count": 4
+        }
+      ]
+    },
+    "NORAD:44432": {
+      "name": "Spektr-RG",
+      "norad_cat_id": "44432",
+      "cospar_id": "2019-040A",
+      "count": 2364,
+      "earliest_epoch_utc": "2019-07-14T11:58:50.816064Z",
+      "latest_epoch_utc": "2025-12-30T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 2364
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2019/bucket-52.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 171
+        },
+        {
+          "path": "chunks/bill_gray/2020/bucket-52.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-52.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-52.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-52.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-52.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-52.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        }
+      ]
+    },
+    "NORAD:44441": {
+      "name": "CHANDRAYAAN 2",
+      "norad_cat_id": "44441",
+      "cospar_id": "2019-042A",
+      "count": 103,
+      "earliest_epoch_utc": "2019-07-22T14:58:50.816064Z",
+      "latest_epoch_utc": "2019-08-17T02:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 103
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2019/bucket-57.json.gz",
+          "source": "bill_gray",
+          "period": "2019",
+          "count": 103
+        }
+      ]
+    },
+    "NORAD:47097": {
+      "name": "CHANG'E 5",
+      "norad_cat_id": "47097",
+      "cospar_id": "2020-087A",
+      "count": 1213,
+      "earliest_epoch_utc": "2020-11-24T11:58:50.816064Z",
+      "latest_epoch_utc": "2024-12-30T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 1213
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2020/bucket-54.json.gz",
+          "source": "bill_gray",
+          "period": "2020",
+          "count": 4
+        },
+        {
+          "path": "chunks/bill_gray/2021/bucket-54.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 113
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-54.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-54.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-54.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        }
+      ]
+    },
+    "NORAD:50463": {
+      "name": "JWST",
+      "norad_cat_id": "50463",
+      "cospar_id": "2021-130A",
+      "count": 1468,
+      "earliest_epoch_utc": "2021-12-25T23:58:50.816064Z",
+      "latest_epoch_utc": "2025-12-30T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 1468
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2021/bucket-32.json.gz",
+          "source": "bill_gray",
+          "period": "2021",
+          "count": 7
+        },
+        {
+          "path": "chunks/bill_gray/2022/bucket-32.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-32.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-32.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-32.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        }
+      ]
+    },
+    "NORAD:52916": {
+      "name": "Photon",
+      "norad_cat_id": "52916",
+      "cospar_id": "2022-070C",
+      "count": 156,
+      "earliest_epoch_utc": "2022-10-19T23:58:50.816064Z",
+      "latest_epoch_utc": "2023-03-22T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 156
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2022/bucket-03.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 74
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-03.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 82
+        }
+      ]
+    },
+    "NORAD:54696": {
+      "name": "Hakuto-R",
+      "norad_cat_id": "54696",
+      "cospar_id": "2022-168A",
+      "count": 79,
+      "earliest_epoch_utc": "2023-01-01T23:58:50.816064Z",
+      "latest_epoch_utc": "2023-03-19T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 79
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2023/bucket-32.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 79
+        }
+      ]
+    },
+    "NORAD:57209": {
+      "name": "Euclid",
+      "norad_cat_id": "57209",
+      "cospar_id": "2023-092A",
+      "count": 915,
+      "earliest_epoch_utc": "2023-07-01T23:58:50.816064Z",
+      "latest_epoch_utc": "2025-12-30T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 915
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2023/bucket-22.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 184
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-22.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-22.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        }
+      ]
+    },
+    "NORAD:57320": {
+      "name": "Chandrayaan-3",
+      "norad_cat_id": "57320",
+      "cospar_id": "2023-098A",
+      "count": 100,
+      "earliest_epoch_utc": "2023-07-15T02:22:50.816064Z",
+      "latest_epoch_utc": "2023-08-03T21:34:50.817792Z",
+      "source_counts": {
+        "bill_gray": 100
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2023/bucket-40.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 100
+        }
+      ]
+    },
+    "NORAD:57770": {
+      "name": "CH 3 PROPULSION MODULE",
+      "norad_cat_id": "57770",
+      "cospar_id": "2023-098C",
+      "count": 785,
+      "earliest_epoch_utc": "2023-11-09T11:58:50.816064Z",
+      "latest_epoch_utc": "2025-12-30T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 785
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2023/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 53
+        },
+        {
+          "path": "chunks/bill_gray/2024/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 366
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-27.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 366
+        }
+      ]
+    },
+    "NORAD:57803": {
+      "name": "SLIM",
+      "norad_cat_id": "57803",
+      "cospar_id": "2023-137D",
+      "count": 109,
+      "earliest_epoch_utc": "2023-09-07T23:58:50.816064Z",
+      "latest_epoch_utc": "2023-12-23T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 109
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2023/bucket-61.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 109
+        }
+      ]
+    },
+    "NORAD:58963": {
+      "name": "IM-1 (Odysseus)",
+      "norad_cat_id": "58963",
+      "cospar_id": "2024-030A",
+      "count": 13,
+      "earliest_epoch_utc": "2024-02-15T17:58:50.816064Z",
+      "latest_epoch_utc": "2024-02-20T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 13
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2024/bucket-47.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 13
+        }
+      ]
+    },
+    "NORAD:59228": {
+      "name": "DRO-A",
+      "norad_cat_id": "59228",
+      "cospar_id": "2024-048A",
+      "count": 700,
+      "earliest_epoch_utc": "2024-07-31T23:58:50.816064Z",
+      "latest_epoch_utc": "2026-06-29T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 700
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2024/bucket-58.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 154
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-58.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2026/bucket-58.json.gz",
+          "source": "bill_gray",
+          "period": "2026",
+          "count": 181
+        }
+      ]
+    },
+    "NORAD:59276": {
+      "name": "Queqiao-2",
+      "norad_cat_id": "59276",
+      "cospar_id": "2024-051A",
+      "count": 6,
+      "earliest_epoch_utc": "2024-03-20T11:58:50.816064Z",
+      "latest_epoch_utc": "2024-03-23T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 6
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2024/bucket-09.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 6
+        }
+      ]
+    },
+    "NORAD:59278": {
+      "name": "Tiandu-1",
+      "norad_cat_id": "59278",
+      "cospar_id": "2024-051C",
+      "count": 445,
+      "earliest_epoch_utc": "2025-04-12T11:58:50.816064Z",
+      "latest_epoch_utc": "2026-06-30T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 445
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2025/bucket-56.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 264
+        },
+        {
+          "path": "chunks/bill_gray/2026/bucket-56.json.gz",
+          "source": "bill_gray",
+          "period": "2026",
+          "count": 181
+        }
+      ]
+    },
+    "NORAD:59627": {
+      "name": "Chang'e-6 Guidao Qi",
+      "norad_cat_id": "59627",
+      "cospar_id": "2024-083A",
+      "count": 742,
+      "earliest_epoch_utc": "2024-06-19T23:58:50.816064Z",
+      "latest_epoch_utc": "2026-06-29T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 742
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2024/bucket-17.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 196
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-17.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2026/bucket-17.json.gz",
+          "source": "bill_gray",
+          "period": "2026",
+          "count": 181
+        }
+      ]
+    },
+    "NORAD:60058": {
+      "name": "DRO-B",
+      "norad_cat_id": "60058",
+      "cospar_id": "2024-048D",
+      "count": 700,
+      "earliest_epoch_utc": "2024-07-31T23:58:50.816064Z",
+      "latest_epoch_utc": "2026-06-29T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 700
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2024/bucket-63.json.gz",
+          "source": "bill_gray",
+          "period": "2024",
+          "count": 154
+        },
+        {
+          "path": "chunks/bill_gray/2025/bucket-63.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 365
+        },
+        {
+          "path": "chunks/bill_gray/2026/bucket-63.json.gz",
+          "source": "bill_gray",
+          "period": "2026",
+          "count": 181
+        }
+      ]
+    },
+    "NORAD:62716": {
+      "name": "Blue Ghost",
+      "norad_cat_id": "62716",
+      "cospar_id": "2025-010A",
+      "count": 29,
+      "earliest_epoch_utc": "2025-01-16T11:58:50.816064Z",
+      "latest_epoch_utc": "2025-02-13T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 29
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2025/bucket-59.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 29
+        }
+      ]
+    },
+    "NORAD:62717": {
+      "name": "Hakuto-R",
+      "norad_cat_id": "62717",
+      "cospar_id": "2025-010B",
+      "count": 111,
+      "earliest_epoch_utc": "2025-01-17T11:58:50.816064Z",
+      "latest_epoch_utc": "2025-05-05T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 111
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2025/bucket-49.json.gz",
+          "source": "bill_gray",
+          "period": "2025",
+          "count": 111
+        }
+      ]
+    },
+    "NORAD:69123": {
+      "name": "SMILE",
+      "norad_cat_id": "69123",
+      "cospar_id": "2026-109A",
+      "count": 193,
+      "earliest_epoch_utc": "2026-06-22T11:58:50.816064Z",
+      "latest_epoch_utc": "2026-12-31T11:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 193
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2026/bucket-58.json.gz",
+          "source": "bill_gray",
+          "period": "2026",
+          "count": 193
+        }
+      ]
+    },
+    "NORAD:79970": {
+      "name": "EQUULEUS",
+      "norad_cat_id": "79970",
+      "cospar_id": "2022-156Z",
+      "count": 409,
+      "earliest_epoch_utc": "2022-11-16T23:58:50.816064Z",
+      "latest_epoch_utc": "2023-12-28T23:58:50.816064Z",
+      "source_counts": {
+        "bill_gray": 409
+      },
+      "chunks": [
+        {
+          "path": "chunks/bill_gray/2022/bucket-17.json.gz",
+          "source": "bill_gray",
+          "period": "2022",
+          "count": 46
+        },
+        {
+          "path": "chunks/bill_gray/2023/bucket-17.json.gz",
+          "source": "bill_gray",
+          "period": "2023",
+          "count": 363
+        }
+      ]
+    }
+  }
+}
