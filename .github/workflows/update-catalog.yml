@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths-ignore:
       - "public/data/catalog.json"
+      - "public/data/history/**"
       - "data/history/**"
 
 permissions:
@@ -56,13 +57,15 @@ jobs:
           --history-root data/history
       - name: Validate history
         run: python scripts/validate_history.py data/history --recent 5
+      - name: Build browser history index
+        run: python scripts/build_web_history.py --history-root data/history --output public/data/history
       - name: Commit data changes
         id: commit
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/catalog.json data/history
+          git add public/data/catalog.json public/data/history data/history
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh orbital catalogs"
             git push

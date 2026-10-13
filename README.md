@@ -13,6 +13,7 @@
 - 导出当前筛选结果为 CSV 或 JSON
 - GitHub Actions 定时刷新 Space-Track GP 和 Bill Gray TLE
 - 按唯一历元追加保存 Space-Track 与 Bill Gray 历史根数，不覆盖旧记录
+- 在目标详情中按需查看历史轨道根数，可按来源筛选并逐批加载
 - 保留数据来源、抓取时间、源文件与提交版本
 
 ## 仓库结构
@@ -25,6 +26,7 @@
 │  └─ data/catalog.json          统一后的当前目录
 ├─ data/registries/              可下载的 Excel 登记表与模板
 ├─ data/history/                 压缩的追加式轨道历史分片与索引
+├─ public/data/history/          供网页按目标加载的压缩历史分片
 ├─ docs/                         数据说明、维护方法与 API 指南
 ├─ scripts/                      导入、更新和校验脚本
 └─ .github/workflows/            自动更新与 Pages 部署工作流
@@ -86,6 +88,8 @@ python scripts/query_history.py `
 ```
 
 Space-Track 的 `GP` 只提供抓取时的最新根数。仓库从 2026-09 起按完整 UTC 自然月保存 `GP_HISTORY`：每月 1 日 03:35 UTC 自动归档上一个月，例如 2026-10 月归档 `2026-09-01` 至 `2026-09-30`，2026-11 月归档 `2026-10-01` 至 `2026-10-31`。`data/history/gp_history_months.json` 记录已完成月份，重复运行会直接跳过。
+
+网页端不会一次下载整个历史库。`scripts/build_web_history.py` 把已归档数据按来源、月份（Bill Gray 按年）和目标哈希桶生成 `public/data/history/`；用户点击目标详情中的“查看历史”后，浏览器只获取与该目标相关的压缩分片。Space-Track 当前未结束月份仍由最新目录展示，待整月归档完成后进入历史视图。
 
 更早或指定目标的历史元素集可使用手动工作流 `Backfill Space-Track history` 分段回溯；同一 `GP_HISTORY` 时间区间不应重复下载。建议先按少量 NORAD 编号和月度时间区间试运行，成功归档后再处理下一批。
 

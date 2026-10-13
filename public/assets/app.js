@@ -1,11 +1,17 @@
 const DATA_URL = "./data/catalog.json";
+const HISTORY_INDEX_URL = "./data/history/index.json";
 const PAGE_SIZE = 24;
+const HISTORY_PAGE_SIZE = 40;
 
 const state = {
   catalog: null,
   filtered: [],
   page: 1,
   selectedKey: null,
+  historyIndex: null,
+  historyChunks: new Map(),
+  historyRows: new Map(),
+  historyDisplayLimit: HISTORY_PAGE_SIZE,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -169,7 +175,171 @@ function renderDetail(record) {
   record.sources
     .slice().sort((a, b) => a.source.localeCompare(b.source))
     .forEach((source) => body.appendChild(makeSourceCard(source)));
+  body.appendChild(makeHistorySection(record));
   elements.detailContent.append(hero, body);
+}
+
+function makeHistorySection(record) {
+  const info = state.historyIndex?.targets?.[record.key];
+  const section = document.createElement("section");
+  section.className = "history-section";
+  section.dataset.targetKey = record.key;
+  const sourceSummary = info
+    ? Object.entries(info.source_counts || {}).map(([source, count]) => `${sourceLabel(source)} ${number(count, 0)}`).join(" · ")
+    : "";
+  section.innerHTML = `
+    <div class="history-launch">
+      <div>
+        <span class="section-kicker">ORBIT HISTORY</span>
+        <h3>历史轨道数据</h3>
+        <p>${info
+          ? `${number(info.count, 0)} 条 · ${dateText(info.earliest_epoch_utc)} 至 ${dateText(info.latest_epoch_utc)}${sourceSummary ? ` · ${escapeHtml(sourceSummary)}` : ""}`
+          : "该目标暂无已归档历史根数。"}</p>
+      </div>
+      <button class="button history-toggle" type="button" ${info ? "" : "disabled"}>查看历史</button>
+    </div>
+    <div class="history-content" hidden></div>`;
+  if (info) {
+    section.querySelector(".history-toggle").addEventListener("click", () => toggleHistory(record, section, info));
+  }
+  return section;
+}
+
+async function toggleHistory(record, section, info) {
+  const button = section.querySelector(".history-toggle");
+  const content = section.querySelector(".history-content");
+  if (!content.hidden) {
+    content.hidden = true;
+    button.textContent = "查看历史";
+    return;
+  }
+  content.hidden = false;
+  button.textContent = "隐藏历史";
+  state.historyDisplayLimit = HISTORY_PAGE_SIZE;
+  if (state.historyRows.has(record.key)) {
+    renderHistoryRows(record, section, info, state.historyRows.get(record.key));
+    return;
+  }
+  content.innerHTML = `<div class="history-status"><span class="history-spinner"></span>正在按目标载入历史分片…</div>`;
+  try {
+    const payloads = await Promise.all(info.chunks.map((chunk) => loadHistoryChunk(chunk.path)));
+    if (state.selectedKey !== record.key || !section.isConnected) return;
+    const rows = payloads.flatMap((payload) => payload.records || [])
+      .filter((row) => row.target_key === record.key)
+      .sort((a, b) => new Date(b.epoch_utc || 0) - new Date(a.epoch_utc || 0));
+    state.historyRows.set(record.key, rows);
+    renderHistoryRows(record, section, info, rows);
+  } catch (error) {
+    console.error(error);
+    content.innerHTML = `<div class="history-status error">历史数据读取失败，请刷新页面后重试。</div>`;
+  }
+}
+
+async function loadHistoryChunk(path) {
+  if (!state.historyChunks.has(path)) {
+    state.historyChunks.set(path, (async () => {
+      const response = await fetch(`./data/history/${path}`, { cache: "force-cache" });
+      if (!response.ok) throw new Error(`History chunk HTTP ${response.status}: ${path}`);
+      if (typeof DecompressionStream === "undefined") {
+        throw new Error("This browser does not support gzip DecompressionStream");
+      }
+      const compressed = await response.arrayBuffer();
+      const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return JSON.parse(await new Response(stream).text());
+    })());
+  }
+  return state.historyChunks.get(path);
+}
+
+function renderHistoryRows(record, section, info, rows) {
+  const content = section.querySelector(".history-content");
+  const selectedSource = content.querySelector(".history-source-filter")?.value || "all";
+  content.replaceChildren();
+
+  const controls = document.createElement("div");
+  controls.className = "history-controls";
+  controls.innerHTML = `
+    <label>来源
+      <select class="history-source-filter">
+        <option value="all">全部来源</option>
+        <option value="spacetrack">Space-Track</option>
+        <option value="bill_gray">Bill Gray</option>
+      </select>
+    </label>
+    <span>${number(rows.length, 0)} 条已载入</span>`;
+  const filter = controls.querySelector("select");
+  filter.value = selectedSource;
+  filter.addEventListener("change", () => {
+    state.historyDisplayLimit = HISTORY_PAGE_SIZE;
+    renderHistoryRows(record, section, info, rows);
+  });
+  content.appendChild(controls);
+
+  const visibleRows = rows.filter((row) => filter.value === "all" || row.source === filter.value);
+  const list = document.createElement("div");
+  list.className = "history-list";
+  visibleRows.slice(0, state.historyDisplayLimit).forEach((row) => list.appendChild(makeHistoryEntry(row)));
+  content.appendChild(list);
+
+  if (!visibleRows.length) {
+    list.innerHTML = `<div class="history-status">当前来源没有已归档记录。</div>`;
+  } else if (visibleRows.length > state.historyDisplayLimit) {
+    const more = document.createElement("button");
+    more.className = "button secondary history-more";
+    more.type = "button";
+    more.textContent = `再显示 ${Math.min(HISTORY_PAGE_SIZE, visibleRows.length - state.historyDisplayLimit)} 条`;
+    more.addEventListener("click", () => {
+      state.historyDisplayLimit += HISTORY_PAGE_SIZE;
+      renderHistoryRows(record, section, info, rows);
+    });
+    content.appendChild(more);
+  }
+}
+
+function makeHistoryEntry(row) {
+  const orbit = row.orbit || {};
+  const card = document.createElement("article");
+  card.className = "history-entry";
+  card.innerHTML = `
+    <div class="history-entry-head">
+      <span class="source-badge ${sourceClass(row.source)}">${sourceLabel(row.source)}</span>
+      <time>${escapeHtml(text(row.epoch_utc))}</time>
+    </div>
+    <div class="history-values">
+      <div><span>a / km</span><strong>${number(orbit.semi_major_axis_km, 3)}</strong></div>
+      <div><span>e</span><strong>${number(orbit.eccentricity, 8)}</strong></div>
+      <div><span>i / deg</span><strong>${number(orbit.inclination_deg, 6)}</strong></div>
+      <div><span>Ω / deg</span><strong>${number(orbit.raan_deg, 6)}</strong></div>
+      <div><span>ω / deg</span><strong>${number(orbit.arg_pericenter_deg, 6)}</strong></div>
+      <div><span>M / deg</span><strong>${number(orbit.mean_anomaly_deg, 6)}</strong></div>
+      <div><span>n / rev·day⁻¹</span><strong>${number(orbit.mean_motion_rev_day, 10)}</strong></div>
+      <div><span>周期 / day</span><strong>${number(orbit.period_days, 8)}</strong></div>
+      <div><span>GP ID</span><strong>${escapeHtml(text(orbit.gp_id))}</strong></div>
+    </div>
+    <details class="history-raw">
+      <summary>完整根数与来源</summary>
+      <div class="history-full-fields"></div>
+      <pre></pre>
+    </details>`;
+  const fullFields = [
+    ["历元 UTC", orbit.epoch_utc], ["半长轴 / km", number(orbit.semi_major_axis_km, 6)],
+    ["偏心率", number(orbit.eccentricity, 10)], ["倾角 / deg", number(orbit.inclination_deg, 8)],
+    ["升交点赤经 / deg", number(orbit.raan_deg, 8)], ["近地点幅角 / deg", number(orbit.arg_pericenter_deg, 8)],
+    ["平近点角 / deg", number(orbit.mean_anomaly_deg, 8)], ["平均运动", number(orbit.mean_motion_rev_day, 12)],
+    ["平均运动一阶导数", scientific(orbit.mean_motion_dot)], ["平均运动二阶导数", scientific(orbit.mean_motion_ddot)],
+    ["BSTAR", scientific(orbit.bstar)], ["近地点高度 / km", number(orbit.perigee_altitude_km, 3)],
+    ["远地点高度 / km", number(orbit.apogee_altitude_km, 3)], ["元素集编号", orbit.element_set_no],
+    ["历元圈次", orbit.rev_at_epoch], ["参考系", orbit.ref_frame], ["时间系统", orbit.time_system],
+    ["生成时间", orbit.creation_date_utc], ["记录入库时间", row.recorded_at_utc],
+  ];
+  const fields = card.querySelector(".history-full-fields");
+  fullFields.forEach(([label, value]) => {
+    const field = document.createElement("div");
+    field.innerHTML = `<span>${escapeHtml(label)}</span><strong>${escapeHtml(text(value))}</strong>`;
+    fields.appendChild(field);
+  });
+  card.querySelector("pre").textContent = [orbit.tle_line0, orbit.tle_line1, orbit.tle_line2].filter(Boolean).join("\n") || "该历史记录未包含原始 TLE 行。";
+  return card;
 }
 
 function makeComparison(record) {
@@ -300,9 +470,13 @@ function bindEvents() {
 async function init() {
   bindEvents();
   try {
-    const response = await fetch(DATA_URL, { cache: "no-store" });
+    const [response, historyResponse] = await Promise.all([
+      fetch(DATA_URL, { cache: "no-store" }),
+      fetch(HISTORY_INDEX_URL, { cache: "no-store" }).catch(() => null),
+    ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.catalog = await response.json();
+    if (historyResponse?.ok) state.historyIndex = await historyResponse.json();
     renderSummary();
     applyFilters();
     $("#load-status").textContent = `目录已加载 · ${dateText(state.catalog.generated_at_utc, true)} UTC`;
@@ -318,3 +492,4 @@ async function init() {
 }
 
 init();
+

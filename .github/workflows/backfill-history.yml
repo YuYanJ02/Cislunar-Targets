@@ -68,12 +68,14 @@ jobs:
           python scripts/backfill_spacetrack_history.py "${args[@]}"
       - name: Validate history
         run: python scripts/validate_history.py data/history --recent 10
+      - name: Build browser history index
+        run: python scripts/build_web_history.py --history-root data/history --output public/data/history
       - name: Commit history shards
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/history
+          git add data/history public/data/history
           if ! git diff --cached --quiet; then
             git commit -m "data: backfill Space-Track orbit history"
             git push
