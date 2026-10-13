@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-10-13T07:17:45.297771Z",
+  "generated_at_utc": "2026-10-13T07:43:37.697589Z",
   "selection": {
     "launch_date_after": "2000-12-31",
     "object_type": "PAYLOAD",
@@ -32,7 +32,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19042a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "19042a.tle",
@@ -2571,7 +2571,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/26069a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "26069a.tle",
@@ -4830,7 +4830,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/25010a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "25010a.tle",
@@ -5423,7 +5423,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19042a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "19042a.tle",
@@ -5447,7 +5447,7 @@
             "tle_line1": "1 44441U 19042A   19229.12419926  .00000000  00000-0  00000-0 2  5921",
             "tle_line2": "2 44441 021.6052 014.8823 9720529 184.5291 105.6417 00.09050060    09"
           },
-          "update_status": "discovered_by_norad_match"
+          "update_status": "updated"
         }
       ]
     },
@@ -5473,7 +5473,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/chandra3.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "chandra3.tle",
@@ -5552,7 +5552,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/23098c25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "23098c25.tle",
@@ -5628,18 +5628,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/20087a.tle",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/20087a24.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
-          "bill_gray_file": "20087a.tle",
-          "bill_gray_name": "2020-087A = NORAD 47097 = Chang'e 5 s/c",
+          "bill_gray_file": "20087a24.tle",
+          "bill_gray_name": "Chang'e 5 = 2020-087A = NORAD 47097",
           "catalog_id": "47097",
           "orbit": {
-            "epoch_utc": "2020-11-27T11:58:50.816064Z",
+            "epoch_utc": "2024-12-30T23:58:50.816064Z",
             "semi_major_axis_km": 204118.712839,
             "period_days": 10.6223710959,
-            "ephemeris_type": "0",
-            "semi_major_axis_method": "tle_mean_motion",
+            "ephemeris_type": "H",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": 0.967698,
             "inclination_deg": 20.0169,
             "raan_deg": 358.8329,
@@ -5648,11 +5648,11 @@
             "mean_motion_rev_day": 0.09414094,
             "perigee_altitude_km": 215.306,
             "apogee_altitude_km": 395265.846,
-            "tle_line0": "2020-087A = NORAD 47097 = Chang'e 5 s/c",
-            "tle_line1": "1 47097U 20087A   20332.49919926  .00000000  00000-0  00000-0 0 10603",
-            "tle_line2": "2 47097 020.0169 358.8329 9676980 229.6209 123.2070 00.09414094    06"
+            "tle_line0": "Chang'e 5 = 2020-087A = NORAD 47097",
+            "tle_line1": "1 47097U 20087A   24365.99919926 -0N8J1VCX -0ACXV1PD -04O5YWH4H 22795",
+            "tle_line2": "2 47097                          +000JNH3Y -001JW24P -000NP3H0     04"
           },
-          "update_status": "discovered_by_norad_match"
+          "update_status": "updated"
         }
       ]
     },
@@ -5678,7 +5678,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24083a26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24083a26.tle",
@@ -8389,7 +8389,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24048a26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24048a26.tle",
@@ -8468,7 +8468,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24048d26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24048d26.tle",
@@ -9787,7 +9787,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/equuleus.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "equuleus.tle",
@@ -9978,7 +9978,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/23092a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "23092a25.tle",
@@ -15386,7 +15386,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22168a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "22168a.tle",
@@ -15436,7 +15436,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/25010b.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "25010b.tle",
@@ -16268,7 +16268,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/08051a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "08051a25.tle",
@@ -16365,7 +16365,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/im1.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "im1.tle",
@@ -17243,7 +17243,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/02048a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "02048a25.tle",
@@ -19155,7 +19155,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/21130a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "21130a25.tle",
@@ -20660,7 +20660,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22168b.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "22168b.tle",
@@ -22966,7 +22966,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22070c.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "22070c.tle",
@@ -23063,7 +23063,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/18045a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "18045a.tle",
@@ -23113,7 +23113,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24051a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24051a.tle",
@@ -26122,7 +26122,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/slim.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "slim.tle",
@@ -26201,7 +26201,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/26109a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "26109a.tle",
@@ -26562,7 +26562,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/11037a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "11037a25.tle",
@@ -26612,7 +26612,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19040a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "19040a25.tle",
@@ -27960,7 +27960,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/18038a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "18038a25.tle",
@@ -28180,7 +28180,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004a19.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "07004a19.tle",
@@ -28259,7 +28259,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004d19.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "07004d19.tle",
@@ -28338,7 +28338,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004e19.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "07004e19.tle",
@@ -28670,7 +28670,7 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "last_verified_utc": "2026-10-13T07:43:36.032251Z",
           "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24051c26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24051c26.tle",
@@ -33167,11 +33167,11 @@
   "refresh": {
     "space_track": {
       "status": "credentials_missing",
-      "at_utc": "2026-10-13T07:17:43.303748Z"
+      "at_utc": "2026-10-13T07:43:36.032194Z"
     },
     "bill_gray": {
       "status": "updated",
-      "at_utc": "2026-10-13T07:17:45.297762Z",
+      "at_utc": "2026-10-13T07:43:37.697581Z",
       "count": 31
     }
   }
