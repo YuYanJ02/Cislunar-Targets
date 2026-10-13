@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at_utc": "2026-10-13T13:08:58.235501Z",
+  "shards": [
+    {
+      "path": "shards/2026/10/history-20261013T130858Z-5a4698a799.jsonl.gz",
+      "created_at_utc": "2026-10-13T13:08:58.235501Z",
+      "record_count": 29036,
+      "source_counts": {
+        "bill_gray": 28360,
+        "spacetrack": 676
+      },
+      "min_epoch_utc": "2001-07-27T08:30:59.999904",
+      "max_epoch_utc": "2026-12-31T11:58:50.816064Z",
+      "sha256": "5a4698a799dce52d695faf2efd9d39cad25599ba1a1939e6053f090412c25a1d",
+      "uncompressed_bytes": 32185231,
+      "compressed_bytes": 3613912
+    }
+  ]
+}
