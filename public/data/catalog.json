@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-10-13T06:36:06.404278Z",
+  "generated_at_utc": "2026-10-13T07:17:45.297771Z",
   "selection": {
     "launch_date_after": "2000-12-31",
     "object_type": "PAYLOAD",
@@ -32,30 +32,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19042a.tle#L643",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19042a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "19042a.tle",
           "bill_gray_name": "19042a",
           "catalog_id": "44441",
           "orbit": {
-            "epoch_utc": "2019-08-17T02:58:50.816000Z",
-            "semi_major_axis_km": 209556.371,
-            "period_days": 11.0496505,
+            "epoch_utc": "2019-08-17T02:58:50.816064Z",
+            "semi_major_axis_km": 209556.37103,
+            "period_days": 11.0496504996,
             "ephemeris_type": "2",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
+            "eccentricity": 0.9720529,
+            "inclination_deg": 21.6052,
+            "raan_deg": 14.8823,
+            "arg_pericenter_deg": 184.5291,
+            "mean_anomaly_deg": 105.6417,
+            "mean_motion_rev_day": 0.0905006,
+            "perigee_altitude_km": -521.644,
+            "apogee_altitude_km": 406878.112,
             "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line1": "1 44441U 19042A   19229.12419926  .00000000  00000-0  00000-0 2  5921",
+            "tle_line2": "2 44441 021.6052 014.8823 9720529 184.5291 105.6417 00.09050060    09"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -2570,18 +2571,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/26069a.tle#L687",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/26069a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "26069a.tle",
           "bill_gray_name": "Artemis II",
           "catalog_id": "68538",
           "orbit": {
-            "epoch_utc": "2026-04-10T19:10:50.816000Z",
+            "epoch_utc": "2026-04-10T19:10:50.816928Z",
             "semi_major_axis_km": 227204.59,
             "period_days": 12.47449262,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -2590,10 +2591,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "Artemis II",
+            "tle_line1": "1 68538U 26069A   26100.79919927 +0004VR8N -000XWGZL -000PI44OH 30180",
+            "tle_line2": "2 68538                          +0003NQ6N +000F6M8S +0009DFIY     04"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -4828,30 +4830,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/25010a.tle#L247",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/25010a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "25010a.tle",
           "bill_gray_name": "2025-010A = NORAD 62716 = Blue Ghost",
           "catalog_id": "62716",
           "orbit": {
-            "epoch_utc": "2025-02-13T11:58:50.816000Z",
-            "semi_major_axis_km": 202401.913,
-            "period_days": 10.48863949,
+            "epoch_utc": "2025-02-13T11:58:50.816064Z",
+            "semi_major_axis_km": 202401.91332,
+            "period_days": 10.4886394923,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.9699175,
+            "inclination_deg": 42.9917,
+            "raan_deg": 354.6651,
+            "arg_pericenter_deg": 349.3203,
+            "mean_anomaly_deg": 137.601,
+            "mean_motion_rev_day": 0.09534125,
+            "perigee_altitude_km": -289.381,
+            "apogee_altitude_km": 392336.934,
+            "tle_line0": "2025-010A = NORAD 62716 = Blue Ghost",
+            "tle_line1": "1 62716U 25010A   25044.49919926  .00000000  00000-0  00000-0 0 26005",
+            "tle_line2": "2 62716 042.9917 354.6651 9699175 349.3203 137.6010 00.09534125    03"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -5416,6 +5419,35 @@
             "tle_line1": null,
             "tle_line2": null
           }
+        },
+        {
+          "source": "bill_gray",
+          "eligible": true,
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19042a.tle",
+          "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
+          "bill_gray_file": "19042a.tle",
+          "bill_gray_name": null,
+          "catalog_id": "44441",
+          "orbit": {
+            "epoch_utc": "2019-08-17T02:58:50.816064Z",
+            "semi_major_axis_km": 209556.37103,
+            "period_days": 11.0496504996,
+            "ephemeris_type": "2",
+            "semi_major_axis_method": "tle_mean_motion",
+            "eccentricity": 0.9720529,
+            "inclination_deg": 21.6052,
+            "raan_deg": 14.8823,
+            "arg_pericenter_deg": 184.5291,
+            "mean_anomaly_deg": 105.6417,
+            "mean_motion_rev_day": 0.0905006,
+            "perigee_altitude_km": -521.644,
+            "apogee_altitude_km": 406878.112,
+            "tle_line0": null,
+            "tle_line1": "1 44441U 19042A   19229.12419926  .00000000  00000-0  00000-0 2  5921",
+            "tle_line2": "2 44441 021.6052 014.8823 9720529 184.5291 105.6417 00.09050060    09"
+          },
+          "update_status": "discovered_by_norad_match"
         }
       ]
     },
@@ -5441,30 +5473,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/chandra3.tle#L734",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/chandra3.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "chandra3.tle",
           "bill_gray_name": "Chandrayaan-3 = 2023-098A = NORAD 57320",
           "catalog_id": "57320",
           "orbit": {
-            "epoch_utc": "2023-08-03T21:34:50.817000Z",
-            "semi_major_axis_km": 187059.115,
-            "period_days": 9.31891933,
+            "epoch_utc": "2023-08-03T21:34:50.817792Z",
+            "semi_major_axis_km": 187059.115307,
+            "period_days": 9.3189193259,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.9773016,
+            "inclination_deg": 20.6432,
+            "raan_deg": 5.9964,
+            "arg_pericenter_deg": 182.7861,
+            "mean_anomaly_deg": 114.7026,
+            "mean_motion_rev_day": 0.10730858,
+            "perigee_altitude_km": -2132.194,
+            "apogee_altitude_km": 363494.151,
+            "tle_line0": "Chandrayaan-3 = 2023-098A = NORAD 57320",
+            "tle_line1": "1 57320U 23098A   23215.89919928  .00000000  00000-0  00000-0 0 20350",
+            "tle_line2": "2 57320 020.6432 005.9964 9773016 182.7861 114.7026 00.10730858    08"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -5519,18 +5552,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/23098c25.tle#L2369",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/23098c25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "23098c25.tle",
           "bill_gray_name": "2023-098C = NORAD 57770 = Chandrayaan-3 PM",
           "catalog_id": "57770",
           "orbit": {
-            "epoch_utc": "2025-12-30T23:58:50.816000Z",
+            "epoch_utc": "2025-12-30T23:58:50.816064Z",
             "semi_major_axis_km": 618025.914,
             "period_days": 55.96380912,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -5539,10 +5572,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "2023-098C = NORAD 57770 = Chandrayaan-3 PM",
+            "tle_line1": "1 57770U 23098C   25364.99919926 -004Y8YSP +004E1RK5 +001MJQ4FH 28629",
+            "tle_line2": "2 57770                          -0004X3VT -00048IRZ -0001VZVO     01"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -5590,6 +5624,35 @@
             "tle_line1": null,
             "tle_line2": null
           }
+        },
+        {
+          "source": "bill_gray",
+          "eligible": true,
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/20087a.tle",
+          "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
+          "bill_gray_file": "20087a.tle",
+          "bill_gray_name": "2020-087A = NORAD 47097 = Chang'e 5 s/c",
+          "catalog_id": "47097",
+          "orbit": {
+            "epoch_utc": "2020-11-27T11:58:50.816064Z",
+            "semi_major_axis_km": 204118.712839,
+            "period_days": 10.6223710959,
+            "ephemeris_type": "0",
+            "semi_major_axis_method": "tle_mean_motion",
+            "eccentricity": 0.967698,
+            "inclination_deg": 20.0169,
+            "raan_deg": 358.8329,
+            "arg_pericenter_deg": 229.6209,
+            "mean_anomaly_deg": 123.207,
+            "mean_motion_rev_day": 0.09414094,
+            "perigee_altitude_km": 215.306,
+            "apogee_altitude_km": 395265.846,
+            "tle_line0": "2020-087A = NORAD 47097 = Chang'e 5 s/c",
+            "tle_line1": "1 47097U 20087A   20332.49919926  .00000000  00000-0  00000-0 0 10603",
+            "tle_line2": "2 47097 020.0169 358.8329 9676980 229.6209 123.2070 00.09414094    06"
+          },
+          "update_status": "discovered_by_norad_match"
         }
       ]
     },
@@ -5615,18 +5678,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24083a26.tle#L1157",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24083a26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24083a26.tle",
           "bill_gray_name": "2024-083A = NORAD 59627 = Chang'e-6 Guidao Qi",
           "catalog_id": "59627",
           "orbit": {
-            "epoch_utc": "2026-06-29T23:58:50.816000Z",
+            "epoch_utc": "2026-06-29T23:58:50.816064Z",
             "semi_major_axis_km": 460121.119,
             "period_days": 35.95054585,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -5635,10 +5698,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "2024-083A = NORAD 59627 = Chang'e-6 Guidao Qi",
+            "tle_line1": "1 59627U 24083A   26180.99919926 +006POZIB -001B26TH +004FESBNH 29098",
+            "tle_line2": "2 59627                          -00030PKC +0001D6KC +0003YH7D     02"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -8325,18 +8389,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24048a26.tle#L1155",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24048a26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24048a26.tle",
           "bill_gray_name": "2024-048A = NORAD 59228 = DRO-A",
           "catalog_id": "59228",
           "orbit": {
-            "epoch_utc": "2026-06-29T23:58:50.816000Z",
+            "epoch_utc": "2026-06-29T23:58:50.816064Z",
             "semi_major_axis_km": 372897.125,
             "period_days": 26.22894304,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -8345,10 +8409,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "2024-048A = NORAD 59228 = DRO-A",
+            "tle_line1": "1 59228U 24048A   26180.99919926 -0006VL02 -006EB0KZ -003JZ5TRH 29091",
+            "tle_line2": "2 59228                          +0004TIN6 +0001E6FW +0000VKCV     05"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -8403,18 +8468,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24048d26.tle#L1155",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24048d26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24048d26.tle",
           "bill_gray_name": "2024-048D = NORAD 60058 = DRO-B",
           "catalog_id": "60058",
           "orbit": {
-            "epoch_utc": "2026-06-29T23:58:50.816000Z",
+            "epoch_utc": "2026-06-29T23:58:50.816064Z",
             "semi_major_axis_km": 253880.701,
             "period_days": 14.73471607,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -8423,10 +8488,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "2024-048D = NORAD 60058 = DRO-B",
+            "tle_line1": "1 60058U 24048D   26180.99919926 +0016XYT6 -0052HPWK -002LQRQIH 29093",
+            "tle_line2": "2 60058                          +0003JYRN +0002KBDL +0002BO4W     02"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -9721,18 +9787,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/equuleus.tle#L2581",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/equuleus.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "equuleus.tle",
           "bill_gray_name": "EQUULEUS = 2022-156ZZZ = NORAD 79970",
           "catalog_id": "79970",
           "orbit": {
-            "epoch_utc": "2023-12-28T23:58:50.816000Z",
+            "epoch_utc": "2023-12-28T23:58:50.816064Z",
             "semi_major_axis_km": 270670.271,
             "period_days": 16.22026979,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -9741,10 +9807,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "EQUULEUS = 2022-156ZZZ = NORAD 79970",
+            "tle_line1": "1 79970U 22156Z   23362.99919926 -002IHRD5 -002DNLFG -002JQFN1H 20758",
+            "tle_line2": "2 79970                          +0006H082 -0003KERJ -0001DV07     03"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -9911,18 +9978,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/23092a25.tle#L2344",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/23092a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "23092a25.tle",
           "bill_gray_name": "Euclid = 2023-092A = NORAD 57209",
           "catalog_id": "57209",
           "orbit": {
-            "epoch_utc": "2025-12-30T23:58:50.816000Z",
+            "epoch_utc": "2025-12-30T23:58:50.816064Z",
             "semi_major_axis_km": 856206.53,
             "period_days": 91.2567592,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -9931,10 +9998,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "Euclid = 2023-092A = NORAD 57209",
+            "tle_line1": "1 57209U 23092A   25364.99919926 -007GEHIC +00LGAL0L +00GJ7UKAH 25488",
+            "tle_line2": "2 57209                          -0000BT3Q -000032HB +00004Z3I     02"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -15318,18 +15386,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22168a.tle#L539",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22168a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "22168a.tle",
           "bill_gray_name": "Hakuto-R = 2022-168A = NORAD 54696",
           "catalog_id": "54696",
           "orbit": {
-            "epoch_utc": "2023-03-19T23:58:50.816000Z",
+            "epoch_utc": "2023-03-19T23:58:50.816064Z",
             "semi_major_axis_km": 552963.072,
             "period_days": 47.36324307,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -15338,10 +15406,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "Hakuto-R = 2022-168A = NORAD 54696",
+            "tle_line1": "1 54696U 22168A   23078.99919926 +00621E23 -0029FPEF -001XWBHXH 18876",
+            "tle_line2": "2 54696                          +0001JA8X +0005QF0O +0002WLX5     03"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -15367,18 +15436,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/25010b.tle#L749",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/25010b.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "25010b.tle",
           "bill_gray_name": "Hakuto-R = 2025-010B = NORAD 62717",
           "catalog_id": "62717",
           "orbit": {
-            "epoch_utc": "2025-05-05T23:58:50.816000Z",
+            "epoch_utc": "2025-05-05T23:58:50.816064Z",
             "semi_major_axis_km": 332310.499,
             "period_days": 22.06547762,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -15387,10 +15456,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "Hakuto-R = 2025-010B = NORAD 62717",
+            "tle_line1": "1 62717U 25010B   25125.99919926 -006J2Y6D +002NOJAN +0016EEAHH 26553",
+            "tle_line2": "2 62717                          -0000DGKG -00048O6O -00026D6K     00"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -16198,30 +16268,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/08051a25.tle#L2248",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/08051a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "08051a25.tle",
           "bill_gray_name": "2008-051A = TR93D0F = IBEX = NORAD 33401",
           "catalog_id": "33401",
           "orbit": {
-            "epoch_utc": "2025-12-31T11:58:50.816000Z",
-            "semi_major_axis_km": 186791.191,
-            "period_days": 9.29890531,
+            "epoch_utc": "2025-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 186791.191202,
+            "period_days": 9.2989053143,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.738556,
+            "inclination_deg": 42.8692,
+            "raan_deg": 2.0225,
+            "arg_pericenter_deg": 56.1492,
+            "mean_anomaly_deg": 210.2502,
+            "mean_motion_rev_day": 0.10753954,
+            "perigee_altitude_km": 42457.299,
+            "apogee_altitude_km": 318368.809,
+            "tle_line0": "2008-051A = TR93D0F = IBEX = NORAD 33401",
+            "tle_line1": "1 33401U 08051A   25365.49919926  .00000000  00000-0  00000-0 0 26174",
+            "tle_line2": "2 33401 042.8692 002.0225 7385560 056.1492 210.2502 00.10753954    02"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -16294,18 +16365,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/im1.tle#L134",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/im1.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "im1.tle",
           "bill_gray_name": "IM-1 (Odysseus) = 2024-030A = NORAD 58963",
           "catalog_id": "58963",
           "orbit": {
-            "epoch_utc": "2024-02-20T23:58:50.816000Z",
+            "epoch_utc": "2024-02-20T23:58:50.816064Z",
             "semi_major_axis_km": 206584.023,
             "period_days": 10.81539368,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -16314,10 +16385,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "IM-1 (Odysseus) = 2024-030A = NORAD 58963",
+            "tle_line1": "1 58963U 24030A   24051.99919926 -003GHOAH +00533OD1 +002UH3EOH 22439",
+            "tle_line2": "2 58963                          -0000AVMV -0000NWBU +00006F2E     03"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -17171,30 +17243,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/02048a25.tle#L610",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/02048a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "02048a25.tle",
           "bill_gray_name": "2002-048A = NORAD 27540 = Integral",
           "catalog_id": "27540",
           "orbit": {
-            "epoch_utc": "2025-12-31T11:58:50.816000Z",
-            "semi_major_axis_km": 81109.707,
-            "period_days": 2.66076481,
+            "epoch_utc": "2025-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 81109.707089,
+            "period_days": 2.6607648065,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.8635576,
+            "inclination_deg": 90.8779,
+            "raan_deg": 355.2175,
+            "arg_pericenter_deg": 265.3232,
+            "mean_anomaly_deg": 171.4434,
+            "mean_motion_rev_day": 0.37583179,
+            "perigee_altitude_km": 4688.666,
+            "apogee_altitude_km": 144774.474,
+            "tle_line0": "2002-048A = NORAD 27540 = Integral",
+            "tle_line1": "1 27540U 02048A   25365.49919926  .00000000  00000-0  00000-0 0 28713",
+            "tle_line2": "2 27540 090.8779 355.2175 8635576 265.3232 171.4434 00.37583179    08"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -19082,18 +19155,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/21130a25.tle#L2342",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/21130a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "21130a25.tle",
           "bill_gray_name": "James Webb Space Telescope = 2021-130A = NORAD 50463",
           "catalog_id": "50463",
           "orbit": {
-            "epoch_utc": "2025-12-30T23:58:50.816000Z",
+            "epoch_utc": "2025-12-30T23:58:50.816064Z",
             "semi_major_axis_km": 860183.187,
             "period_days": 91.89326082,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -19102,10 +19175,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "James Webb Space Telescope = 2021-130A = NORAD 50463",
+            "tle_line1": "1 50463U 21130A   25364.99919926 +001FPU9D +00RGI9LO +005O8TLOH 25481",
+            "tle_line2": "2 50463                          -0000E36L -00002NHC +00008XR5     06"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -20586,18 +20660,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22168b.tle#L726",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22168b.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "22168b.tle",
           "bill_gray_name": "Lunar Flashlight",
           "catalog_id": "54697",
           "orbit": {
-            "epoch_utc": "2023-03-20T11:58:50.816000Z",
+            "epoch_utc": "2023-03-20T11:58:50.816064Z",
             "semi_major_axis_km": 359247.604,
             "period_days": 24.80207742,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -20606,10 +20680,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "Lunar Flashlight",
+            "tle_line1": "1 54697U 22168B   23079.49919926 +006H67M3 -000VGM9Y -000Z4YHPH 18063",
+            "tle_line2": "2 54697                          +0000JAQU +0005EZUN +0001BTXS     09"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -22891,18 +22966,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22070c.tle#L1001",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/22070c.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "22070c.tle",
           "bill_gray_name": "Photon = NORAD 52916 = 2022-070C",
           "catalog_id": "52916",
           "orbit": {
-            "epoch_utc": "2023-03-22T23:58:50.816000Z",
+            "epoch_utc": "2023-03-22T23:58:50.816064Z",
             "semi_major_axis_km": 938854.838,
             "period_days": 104.78398501,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -22911,10 +22986,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "Photon = NORAD 52916 = 2022-070C",
+            "tle_line1": "1 52916U 22070C   23081.99919926 +005ZSJIO -000TA158 -001JURM7H 19002",
+            "tle_line2": "2 52916                          +0005DRI5 +00053WWA +000266S1     08"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -22987,30 +23063,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/18045a.tle#L88",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/18045a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "18045a.tle",
           "bill_gray_name": "2018-045A = NORAD 43470 = Queqiao",
           "catalog_id": "43470",
           "orbit": {
-            "epoch_utc": "2018-05-24T11:58:50.816000Z",
-            "semi_major_axis_km": 193948.54,
-            "period_days": 9.83845745,
+            "epoch_utc": "2018-05-24T11:58:50.816064Z",
+            "semi_major_axis_km": 193948.540468,
+            "period_days": 9.8384574479,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.9696628,
+            "inclination_deg": 35.3452,
+            "raan_deg": 202.5371,
+            "arg_pericenter_deg": 175.4084,
+            "mean_anomaly_deg": 135.1331,
+            "mean_motion_rev_day": 0.10164195,
+            "perigee_altitude_km": -494.281,
+            "apogee_altitude_km": 375635.088,
+            "tle_line0": "2018-045A = NORAD 43470 = Queqiao",
+            "tle_line1": "1 43470U 18045A   18144.49919926  .00000000  00000-0  00000-0 0  1434",
+            "tle_line2": "2 43470 035.3452 202.5371 9696628 175.4084 135.1331 00.10164195    01"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -23036,18 +23113,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24051a.tle#L89",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24051a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24051a.tle",
           "bill_gray_name": "Queqiao-2 = NORAD 59276 = 2024-051A",
           "catalog_id": "59276",
           "orbit": {
-            "epoch_utc": "2024-03-23T23:58:50.816000Z",
+            "epoch_utc": "2024-03-23T23:58:50.816064Z",
             "semi_major_axis_km": 208726.169,
             "period_days": 10.98405227,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -23056,10 +23133,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "Queqiao-2 = NORAD 59276 = 2024-051A",
+            "tle_line1": "1 59276U 24051A   24083.99919926 -006GOWN6 +0003IYUM +0004UHZWH 22737",
+            "tle_line2": "2 59276                          -0001WUQ9 -0000PKXL +0000NFFC     03"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -26044,18 +26122,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/slim.tle#L805",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/slim.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "slim.tle",
           "bill_gray_name": "SLIM",
           "catalog_id": "57803",
           "orbit": {
-            "epoch_utc": "2023-12-23T23:58:50.816000Z",
+            "epoch_utc": "2023-12-23T23:58:50.816064Z",
             "semi_major_axis_km": 445520.976,
             "period_days": 34.25306762,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -26064,10 +26142,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "SLIM",
+            "tle_line1": "1 57803U 23137D   23357.99919926 +003TLR88 +005A09GA +001I4P5SH 21695",
+            "tle_line2": "2 57803                          -00053ZOY +0002CRRL +0002JRUT     08"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -26122,30 +26201,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/26109a.tle#L594",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/26109a.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "26109a.tle",
           "bill_gray_name": "2026-109A = NORAD 69123 = SMILE",
           "catalog_id": "69123",
           "orbit": {
-            "epoch_utc": "2026-09-14T11:58:50.816000Z",
-            "semi_major_axis_km": 69375.938,
-            "period_days": 2.10479855,
+            "epoch_utc": "2026-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 69370.615087,
+            "period_days": 2.1045563371,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.7939867,
+            "inclination_deg": 69.9265,
+            "raan_deg": 205.9199,
+            "arg_pericenter_deg": 283.513,
+            "mean_anomaly_deg": 15.8467,
+            "mean_motion_rev_day": 0.47515953,
+            "perigee_altitude_km": 7913.132,
+            "apogee_altitude_km": 118071.824,
+            "tle_line0": "2026-109A = NORAD 69123 = SMILE",
+            "tle_line1": "1 69123U 26109A   26365.49919926  .00000000  00000-0  00000-0 0 31793",
+            "tle_line2": "2 69123 069.9265 205.9199 7939867 283.5130 015.8467 00.47515953    06"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -26482,30 +26562,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/11037a25.tle#L2248",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/11037a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "11037a25.tle",
           "bill_gray_name": "2011-037A = NORAD 37755 = Spektr-R",
           "catalog_id": "37755",
           "orbit": {
-            "epoch_utc": "2025-12-31T11:58:50.816000Z",
-            "semi_major_axis_km": 175257.359,
-            "period_days": 8.45106869,
+            "epoch_utc": "2025-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 175257.35884,
+            "period_days": 8.4510686926,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.77397,
+            "inclination_deg": 86.5115,
+            "raan_deg": 316.0003,
+            "arg_pericenter_deg": 356.2983,
+            "mean_anomaly_deg": 262.1261,
+            "mean_motion_rev_day": 0.11832823,
+            "perigee_altitude_km": 33235.284,
+            "apogee_altitude_km": 304523.16,
+            "tle_line0": "2011-037A = NORAD 37755 = Spektr-R",
+            "tle_line1": "1 37755U 11037A   25365.49919926  .00000000  00000-0  00000-0 0 27247",
+            "tle_line2": "2 37755 086.5115 316.0003 7739700 356.2983 262.1261 00.11832823    05"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -26531,18 +26612,18 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19040a25.tle#L2304",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/19040a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "19040a25.tle",
           "bill_gray_name": "2019-040A = NORAD 44432 = Spektr-RG",
           "catalog_id": "44432",
           "orbit": {
-            "epoch_utc": "2025-12-30T23:58:50.816000Z",
+            "epoch_utc": "2025-12-30T23:58:50.816064Z",
             "semi_major_axis_km": 854467.259,
             "period_days": 90.97883629,
             "ephemeris_type": "H",
-            "semi_major_axis_method": "state_vector_energy",
+            "semi_major_axis_method": "state_vector_extension_unparsed",
             "eccentricity": null,
             "inclination_deg": null,
             "raan_deg": null,
@@ -26551,10 +26632,11 @@
             "mean_motion_rev_day": null,
             "perigee_altitude_km": null,
             "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "tle_line0": "2019-040A = NORAD 44432 = Spektr-RG",
+            "tle_line1": "1 44432U 19040A   25364.99919926 -000FGGZT +00N8CUJ3 +00FL346GH 28911",
+            "tle_line2": "2 44432                          -0000CW4K -0000303J +00006H41     02"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -27878,30 +27960,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/18038a25.tle#L2359",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/18038a25.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "18038a25.tle",
           "bill_gray_name": "TESS = 2018-038A = NORAD 43435",
           "catalog_id": "43435",
           "orbit": {
-            "epoch_utc": "2025-12-31T11:58:50.816000Z",
-            "semi_major_axis_km": 250945.51,
-            "period_days": 14.47992735,
+            "epoch_utc": "2025-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 250945.51016,
+            "period_days": 14.4799273455,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.4103819,
+            "inclination_deg": 56.0445,
+            "raan_deg": 41.2444,
+            "arg_pericenter_deg": 76.9267,
+            "mean_anomaly_deg": 233.5678,
+            "mean_motion_rev_day": 0.06906112,
+            "perigee_altitude_km": 141583.878,
+            "apogee_altitude_km": 347550.868,
+            "tle_line0": "TESS = 2018-038A = NORAD 43435",
+            "tle_line1": "1 43435U 18038A   25365.49919926  .00000000  00000-0  00000-0 0 27539",
+            "tle_line2": "2 43435 056.0445 041.2444 4103819 076.9267 233.5678 00.06906112    06"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -28097,30 +28180,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004a.tle#L944",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004a19.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
-          "bill_gray_file": "07004a.tle",
+          "bill_gray_file": "07004a19.tle",
           "bill_gray_name": "NORAD 30580 = 2007-004A = THEMIS A",
           "catalog_id": "30580",
           "orbit": {
-            "epoch_utc": "2022-05-22T11:58:50.816000Z",
-            "semi_major_axis_km": 46050.665,
-            "period_days": 1.13828523,
+            "epoch_utc": "2021-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 46052.506638,
+            "period_days": 1.1383535042,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.8391629,
+            "inclination_deg": 15.7947,
+            "raan_deg": 0.45,
+            "arg_pericenter_deg": 133.5258,
+            "mean_anomaly_deg": 164.7919,
+            "mean_motion_rev_day": 0.87846174,
+            "perigee_altitude_km": 1028.815,
+            "apogee_altitude_km": 78319.925,
+            "tle_line0": "NORAD 30580 = 2007-004A = THEMIS A",
+            "tle_line1": "1 30580U 07004A   21365.49919926  .00000000  00000-0  00000-0 0 14449",
+            "tle_line2": "2 30580 015.7947 000.4500 8391629 133.5258 164.7919 00.87846174    07"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -28175,30 +28259,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004d.tle#L941",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004d19.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
-          "bill_gray_file": "07004d.tle",
+          "bill_gray_file": "07004d19.tle",
           "bill_gray_name": "NORAD 30797 = 2007-004D = THEMIS D",
           "catalog_id": "30797",
           "orbit": {
-            "epoch_utc": "2022-05-22T11:58:50.816000Z",
-            "semi_major_axis_km": 46052.79,
-            "period_days": 1.13836401,
+            "epoch_utc": "2021-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 46050.539794,
+            "period_days": 1.1382805785,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.8364077,
+            "inclination_deg": 12.2049,
+            "raan_deg": 349.5486,
+            "arg_pericenter_deg": 147.0264,
+            "mean_anomaly_deg": 173.5614,
+            "mean_motion_rev_day": 0.87851802,
+            "perigee_altitude_km": 1155.377,
+            "apogee_altitude_km": 78189.429,
+            "tle_line0": "NORAD 30797 = 2007-004D = THEMIS D",
+            "tle_line1": "1 30797U 07004D   21365.49919926  .00000000  00000-0  00000-0 0 14449",
+            "tle_line2": "2 30797 012.2049 349.5486 8364077 147.0264 173.5614 00.87851802    00"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -28253,30 +28338,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004e.tle#L941",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/07004e19.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
-          "bill_gray_file": "07004e.tle",
+          "bill_gray_file": "07004e19.tle",
           "bill_gray_name": "NORAD 30798 = 2007-004E = THEMIS E",
           "catalog_id": "30798",
           "orbit": {
-            "epoch_utc": "2022-05-22T11:58:50.816000Z",
-            "semi_major_axis_km": 46050.181,
-            "period_days": 1.13826728,
+            "epoch_utc": "2021-12-31T11:58:50.816064Z",
+            "semi_major_axis_km": 46050.702991,
+            "period_days": 1.1382866293,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.8347864,
+            "inclination_deg": 12.4752,
+            "raan_deg": 1.451,
+            "arg_pericenter_deg": 137.6632,
+            "mean_anomaly_deg": 160.7139,
+            "mean_motion_rev_day": 0.87851335,
+            "perigee_altitude_km": 1230.065,
+            "apogee_altitude_km": 78115.067,
+            "tle_line0": "NORAD 30798 = 2007-004E = THEMIS E",
+            "tle_line1": "1 30798U 07004E   21365.49919926  .00000000  00000-0  00000-0 0 14440",
+            "tle_line2": "2 30798 012.4752 001.4510 8347864 137.6632 160.7139 00.87851335    06"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -28584,30 +28670,31 @@
         {
           "source": "bill_gray",
           "eligible": true,
-          "last_verified_utc": "2026-10-12T00:00:00Z",
-          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24051c26.tle#L1142",
+          "last_verified_utc": "2026-10-13T07:17:43.303820Z",
+          "source_url": "https://github.com/Bill-Gray/tles/blob/4b1417647b9b5595f903628b8283a07180fb3a35/24051c26.tle",
           "source_commit": "4b1417647b9b5595f903628b8283a07180fb3a35",
           "bill_gray_file": "24051c26.tle",
           "bill_gray_name": "2024-051C = NORAD 59278 = Tiandu-1",
           "catalog_id": "59278",
           "orbit": {
-            "epoch_utc": "2026-06-30T11:58:50.816000Z",
-            "semi_major_axis_km": 210921.46,
-            "period_days": 11.15779533,
+            "epoch_utc": "2026-06-30T11:58:50.816064Z",
+            "semi_major_axis_km": 210921.45979,
+            "period_days": 11.1577953268,
             "ephemeris_type": "0",
             "semi_major_axis_method": "tle_mean_motion",
-            "eccentricity": null,
-            "inclination_deg": null,
-            "raan_deg": null,
-            "arg_pericenter_deg": null,
-            "mean_anomaly_deg": null,
-            "mean_motion_rev_day": null,
-            "perigee_altitude_km": null,
-            "apogee_altitude_km": null,
-            "tle_line0": null,
-            "tle_line1": null,
-            "tle_line2": null
-          }
+            "eccentricity": 0.4490082,
+            "inclination_deg": 39.4393,
+            "raan_deg": 344.142,
+            "arg_pericenter_deg": 235.1185,
+            "mean_anomaly_deg": 42.8606,
+            "mean_motion_rev_day": 0.08962344,
+            "perigee_altitude_km": 109837.858,
+            "apogee_altitude_km": 299248.788,
+            "tle_line0": "2024-051C = NORAD 59278 = Tiandu-1",
+            "tle_line1": "1 59278U 24051C   26181.49919926  .00000000  00000-0  00000-0 0 29093",
+            "tle_line2": "2 59278 039.4393 344.1420 4490082 235.1185 042.8606 00.08962344    06"
+          },
+          "update_status": "updated"
         }
       ]
     },
@@ -33076,5 +33163,16 @@
         }
       ]
     }
-  ]
+  ],
+  "refresh": {
+    "space_track": {
+      "status": "credentials_missing",
+      "at_utc": "2026-10-13T07:17:43.303748Z"
+    },
+    "bill_gray": {
+      "status": "updated",
+      "at_utc": "2026-10-13T07:17:45.297762Z",
+      "count": 31
+    }
+  }
 }
