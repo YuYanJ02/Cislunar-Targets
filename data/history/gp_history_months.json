@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "start_month": "2026-09",
+  "updated_at_utc": "2026-10-13T13:21:27.109655Z",
+  "months": [
+    {
+      "month": "2026-09",
+      "start_epoch": "2026-09-01",
+      "end_epoch": "2026-09-30",
+      "completed_at_utc": "2026-10-13T13:21:27.097281Z",
+      "target_count": 690,
+      "status": "complete"
+    }
+  ]
+}
