@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "如果您在研究中使用本目录或其派生结果，请引用本项目及实际使用的原始数据来源。"
+title: "Cislunar Targets: 地月空间目标目录"
+type: dataset
+authors:
+  - name: "YuYanJ02"
+repository-code: "https://github.com/YuYanJ02/Cislunar-Targets"
+url: "https://yuyanj02.github.io/Cislunar-Targets/"
+date-released: 2026-10-13
+abstract: "一个汇集并规范化 Space-Track 与 Bill Gray 高轨目标数据、提供轨道信息检索和来源追溯的研究型目录。"
+keywords:
+  - cislunar space
+  - space situational awareness
+  - orbit catalog
+  - OMM
+  - TLE
+

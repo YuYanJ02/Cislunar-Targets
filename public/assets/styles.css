@@ -96,7 +96,7 @@ h1 { font-size: clamp(28px, 3.2vw, 44px); line-height: 1.05; letter-spacing: -.0
 .metric-note { color: #6f8c96; font-size: 11px; }
 
 .workspace { display: grid; gap: 14px; }
-.toolbar-panel, .catalog-panel, .detail-panel, .notes-panel {
+.toolbar-panel, .catalog-panel, .detail-panel, .citation-panel, .notes-panel {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); backdrop-filter: blur(18px);
 }
 .toolbar-panel { padding: 16px; }
@@ -126,7 +126,7 @@ select {
 .catalog-panel { min-width: 0; overflow: hidden; }
 .detail-panel { position: sticky; top: 14px; min-height: 620px; overflow: hidden; }
 .panel-heading { padding: 20px 22px 14px; display: flex; justify-content: space-between; align-items: end; }
-.panel-heading h2, .notes-panel h2 { margin: 0; font-size: 20px; }
+.panel-heading h2, .citation-panel h2, .notes-panel h2 { margin: 0; font-size: 20px; }
 .result-count { color: var(--muted); font-size: 12px; }
 .table-shell { overflow-x: auto; min-height: 518px; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
@@ -186,6 +186,19 @@ tbody tr.selected { box-shadow: inset 3px 0 0 var(--cyan); }
 .raw-elements pre { white-space: pre-wrap; overflow-wrap: anywhere; color: #86a4ad; font-size: 9px; line-height: 1.5; background: #051016; border-radius: 8px; padding: 10px; }
 .source-url { font-size: 11px; text-decoration: none; }
 
+.citation-panel { margin-top: 14px; padding: 22px; }
+.citation-intro { display: flex; justify-content: space-between; align-items: end; gap: 26px; }
+.citation-intro > p { max-width: 720px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.citation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.citation-card { min-width: 0; padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: rgba(4,15,21,.42); }
+.citation-card h3 { margin: 12px 0 8px; color: #d5e4e7; font-size: 14px; }
+.citation-card p { margin: 0 0 14px; color: var(--muted); font-size: 11px; line-height: 1.75; }
+.citation-card a { font-size: 11px; text-decoration: none; }
+.citation-tag { display: inline-flex; align-items: center; width: fit-content; border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
+.citation-tag.st { color: var(--cyan); background: var(--cyan-soft); border-color: rgba(80,213,222,.25); }
+.citation-tag.bg { color: var(--orange); background: var(--orange-soft); border-color: rgba(240,163,90,.25); }
+.citation-tag.derived { color: var(--green); background: rgba(103,211,171,.08); border-color: rgba(103,211,171,.24); }
+
 .notes-panel { margin: 14px 0 44px; padding: 22px; }
 .note-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
 .note-grid p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; border-left: 2px solid var(--line-strong); padding-left: 13px; }
@@ -218,8 +231,11 @@ tbody tr.selected { box-shadow: inset 3px 0 0 var(--cyan); }
   th:nth-child(3), td:nth-child(3), th:nth-child(5), td:nth-child(5) { display: none; }
   th, td { padding-inline: 12px; }
   .target-name { max-width: 150px; }
+  .citation-intro { display: grid; gap: 12px; }
+  .citation-grid { grid-template-columns: 1fr; }
   .note-grid { grid-template-columns: 1fr; }
   .source-links span { margin-left: 0; width: 100%; }
   .orbit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .delta-grid { grid-template-columns: 1fr; }
 }
+

@@ -33,6 +33,8 @@
 - [字段和统一规则](docs/data-dictionary.md)
 - [更新、校验与部署流程](docs/maintenance.md)
 - [数据符合性分析框架](docs/consistency-analysis.md)
+- [数据来源、引用与许可边界](DATA_SOURCES.md)
+- [项目引用元数据](CITATION.cff)
 - [Space-Track API 操作指南](docs/guides/Space-Track_API数据检索与下载操作指南.docx)
 - [登记表下载目录](data/registries/)
 
@@ -83,7 +85,11 @@ Bill Gray 更新器优先更新登记表中已有的源文件，并自动发现�
 
 ## 数据使用说明
 
-Space-Track 的基本 SSA 数据包括 GP/TLE/OMM、SATCAT 和再入数据。公开展示时应注明来源。Bill Gray 数据来自 `Bill-Gray/tles` 仓库。页面中的公开 TLE/OMM 不应用于业务级碰撞预警。
+Space-Track 官方允许转发基本 SSA 数据及基于这些数据的分析，但以适当注明来源为条件。本项目的自动更新当前使用 GP 类返回的 OMM/JSON 字段，查询口径与访问时间均在仓库和数据记录中保留。
+
+Bill Gray 数据来自 [`Bill-Gray/tles`](https://github.com/Bill-Gray/tles)。截至 2026-10-13，该仓库根目录未声明适用于整库数据的许可证；本项目保留仓库、源文件和提交版本信息，但公开可访问不等于获得任意再许可权。
+
+论文、报告或再发布数据时，请同时引用本项目与实际使用的原始来源。完整的推荐引用格式、查询 URL、可追溯字段及许可边界见 [DATA_SOURCES.md](DATA_SOURCES.md)；GitHub 的“Cite this repository”功能读取 [CITATION.cff](CITATION.cff)。
 
 数据来源：
 
