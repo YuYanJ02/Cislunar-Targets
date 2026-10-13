@@ -1,5 +1,7 @@
 name: Update catalog and deploy Pages
 
+# Refresh source catalogs, validate the unified snapshot, and publish the static site.
+
 on:
   workflow_dispatch:
   schedule:
