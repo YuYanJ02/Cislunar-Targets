@@ -1,6 +1,6 @@
 name: Update catalog and deploy Pages
 
-# Refresh source catalogs, validate the unified snapshot, and publish the static site.
+# Refresh source catalogs, validate the unified snapshot, and publish public/ with GitHub Pages.
 
 on:
   workflow_dispatch:
