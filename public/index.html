@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Space-Track 与 Bill Gray 地月空间目标目录">
+  <title>地月空间目标目录</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div class="star-field" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="brand-block">
+      <div class="brand-mark" aria-hidden="true">
+        <span class="orbit-ring"></span><span class="orbit-dot"></span>
+      </div>
+      <div>
+        <p class="eyebrow">CISLUNAR OBJECT CATALOG</p>
+        <h1>地月空间目标目录</h1>
+        <p class="subtitle">Space-Track 与 Bill Gray 轨道数据的统一检索、比对与维护</p>
+      </div>
+    </div>
+    <div class="header-status">
+      <span class="status-dot" id="load-status-dot"></span>
+      <span id="load-status">正在读取目录</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary-grid" aria-label="目录摘要">
+      <article class="metric-card metric-primary">
+        <span class="metric-label">统一目标</span>
+        <strong id="metric-total">—</strong>
+        <span class="metric-note">按 NORAD / COSPAR 合并</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Space-Track</span>
+        <strong id="metric-st">—</strong>
+        <span class="metric-note">PAYLOAD · 未再入 · a &gt; GEO</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Bill Gray</span>
+        <strong id="metric-bg">—</strong>
+        <span class="metric-note">高轨与地月任务轨道文件</span>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">双源匹配</span>
+        <strong id="metric-matched">—</strong>
+        <span class="metric-note">可开展源间符合分析</span>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <div class="toolbar-panel">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.4-4.4m2.4-5.1a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+          <input id="search" type="search" placeholder="检索名称、NORAD、COSPAR 或别名" autocomplete="off">
+          <kbd>/</kbd>
+        </div>
+        <div class="filter-row">
+          <label>来源
+            <select id="source-filter">
+              <option value="all">全部来源</option>
+              <option value="matched">双源匹配</option>
+              <option value="spacetrack">仅含 Space-Track</option>
+              <option value="bill_gray">仅含 Bill Gray</option>
+            </select>
+          </label>
+          <label>数据状态
+            <select id="freshness-filter">
+              <option value="all">全部状态</option>
+              <option value="fresh">7 天内</option>
+              <option value="aging">8–30 天</option>
+              <option value="stale">超过 30 天</option>
+              <option value="unknown">无历元</option>
+            </select>
+          </label>
+          <label>排序
+            <select id="sort-select">
+              <option value="name">名称</option>
+              <option value="sma-desc">半长轴：大到小</option>
+              <option value="sma-asc">半长轴：小到大</option>
+              <option value="epoch-desc">历元：新到旧</option>
+              <option value="norad">NORAD</option>
+            </select>
+          </label>
+          <label class="check-label">
+            <input id="eligible-only" type="checkbox" checked>
+            <span>仅显示符合筛选口径</span>
+          </label>
+          <div class="toolbar-actions">
+            <button class="button secondary" id="export-csv" type="button">导出 CSV</button>
+            <button class="button secondary" id="export-json" type="button">导出 JSON</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <section class="catalog-panel" aria-label="目标列表">
+          <div class="panel-heading">
+            <div>
+              <span class="section-kicker">TARGET INDEX</span>
+              <h2>目标索引</h2>
+            </div>
+            <span id="result-count" class="result-count">0 条</span>
+          </div>
+          <div class="table-shell">
+            <table>
+              <thead>
+                <tr>
+                  <th>目标</th>
+                  <th>来源</th>
+                  <th>NORAD / COSPAR</th>
+                  <th>半长轴</th>
+                  <th>周期</th>
+                  <th>最新历元</th>
+                </tr>
+              </thead>
+              <tbody id="catalog-body"></tbody>
+            </table>
+            <div id="empty-state" class="empty-state" hidden>
+              <span class="empty-orbit" aria-hidden="true"></span>
+              <h3>没有匹配的目标</h3>
+              <p>请调整检索词或筛选条件。</p>
+            </div>
+          </div>
+          <div class="pagination">
+            <button class="button ghost" id="prev-page" type="button">上一页</button>
+            <span id="page-label">第 1 / 1 页</span>
+            <button class="button ghost" id="next-page" type="button">下一页</button>
+          </div>
+        </section>
+
+        <aside class="detail-panel" id="detail-panel" aria-label="目标详情">
+          <div id="detail-placeholder" class="detail-placeholder">
+            <div class="orbit-visual placeholder-orbit" aria-hidden="true">
+              <span class="earth"></span><span class="path path-a"></span><span class="satellite"></span>
+            </div>
+            <h2>选择一个目标</h2>
+            <p>查看两个来源的轨道历元、根数、源文件和差异。</p>
+          </div>
+          <div id="detail-content" hidden></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="notes-panel">
+      <div>
+        <span class="section-kicker">DATA NOTES</span>
+        <h2>数据口径</h2>
+      </div>
+      <div class="note-grid">
+        <p><strong>未再入不等于在役。</strong>Space-Track 的空再入日期只能说明目录未记录再入，页面不据此判断任务是否仍正常运行。</p>
+        <p><strong>半长轴条件不是瞬时距离条件。</strong>高偏心率目标可能在近地点进入 GEO 以内，但仍满足半长轴大于 42,164 km。</p>
+        <p><strong>公开根数不用于业务级碰撞预警。</strong>页面用于目录维护、数据审查和研究分析，轨道精度取决于来源与历元。</p>
+      </div>
+      <div class="source-links">
+        <a href="https://www.space-track.org/documentation" target="_blank" rel="noreferrer">Space-Track 文档</a>
+        <a href="https://github.com/Bill-Gray/tles" target="_blank" rel="noreferrer">Bill Gray TLE 仓库</a>
+        <span id="generated-at">目录生成时间：—</span>
+      </div>
+    </section>
+  </main>
+
+  <template id="source-card-template">
+    <article class="source-card">
+      <div class="source-card-head">
+        <span class="source-badge"></span>
+        <span class="freshness-badge"></span>
+      </div>
+      <div class="orbit-grid"></div>
+      <details class="raw-elements">
+        <summary>原始根数与来源</summary>
+        <pre></pre>
+        <a class="source-url" target="_blank" rel="noreferrer">打开源数据</a>
+      </details>
+    </article>
+  </template>
+
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
+
