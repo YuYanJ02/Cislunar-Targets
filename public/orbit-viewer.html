@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="地月空间目标三维轨道可视化">
+  <title>三维轨道工作台 · 地月空间目标目录</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/orbit-viewer.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+        "satellite.js": "https://cdn.jsdelivr.net/npm/satellite.js@6.0.2/+esm",
+        "astronomy-engine": "https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/esm/astronomy.js"
+      }
+    }
+  </script>
+</head>
+<body class="viewer-page">
+  <div class="star-field" aria-hidden="true"></div>
+  <header class="site-header viewer-header">
+    <div class="brand-block">
+      <div class="brand-mark" aria-hidden="true"><span class="orbit-ring"></span><span class="orbit-dot"></span></div>
+      <div>
+        <p class="eyebrow">CISLUNAR ORBIT LAB</p>
+        <h1>三维轨道工作台</h1>
+        <p class="subtitle">最新公开根数传播与地月空间几何展示</p>
+      </div>
+    </div>
+    <div class="header-status">
+      <span class="status-dot" id="viewer-status-dot"></span>
+      <span id="viewer-status">正在初始化三维场景</span>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="主导航">
+    <a href="./index.html">目标目录</a>
+    <a class="active" href="./orbit-viewer.html" aria-current="page">三维轨道</a>
+  </nav>
+
+  <main class="viewer-main">
+    <section class="viewer-toolbar" aria-label="三维轨道控制">
+      <label>坐标系
+        <select id="frame-select">
+          <option value="teme">TEME 地心惯性系</option>
+          <option value="em-rotating">地心—月球旋转系</option>
+        </select>
+      </label>
+      <label>轨道来源
+        <select id="viewer-source-select">
+          <option value="auto">自动选择最新来源</option>
+          <option value="spacetrack">Space-Track</option>
+          <option value="bill_gray">Bill Gray</option>
+        </select>
+      </label>
+      <label class="time-control">显示时刻 UTC
+        <input id="viewer-time" type="datetime-local" step="1">
+      </label>
+      <div class="viewer-toolbar-actions">
+        <button class="button secondary" id="use-now" type="button">当前时刻</button>
+        <button class="button secondary" id="use-epoch" type="button">最新历元</button>
+        <button class="button secondary" id="fit-view" type="button">适配视野</button>
+      </div>
+    </section>
+
+    <section class="viewer-grid">
+      <aside class="viewer-targets" aria-label="目标选择">
+        <div class="viewer-panel-heading">
+          <div><span class="section-kicker">TARGETS</span><h2>目标选择</h2></div>
+          <span id="selected-count">0 / 8</span>
+        </div>
+        <div class="viewer-search">
+          <input id="viewer-search" type="search" placeholder="名称、NORAD 或 COSPAR" autocomplete="off">
+        </div>
+        <div id="selected-targets" class="selected-targets" aria-live="polite"></div>
+        <div id="viewer-target-list" class="viewer-target-list"></div>
+      </aside>
+
+      <section class="scene-panel" aria-label="三维轨道场景">
+        <div id="scene-container" class="scene-container">
+          <canvas id="orbit-canvas" aria-label="地月空间三维轨道场景"></canvas>
+          <div id="scene-labels" class="scene-labels" aria-hidden="true"></div>
+          <div class="scene-readout">
+            <span id="frame-readout">TEME</span>
+            <span id="time-readout">—</span>
+            <span id="scale-readout">单位：km</span>
+          </div>
+          <div class="scene-legend">
+            <span><i class="legend-line geo"></i>GEO 环</span>
+            <span><i class="legend-dot moon"></i>月球</span>
+            <span><i class="legend-dot lagrange"></i>L1 / L2</span>
+          </div>
+          <div id="scene-message" class="scene-message" role="status">正在读取目标目录…</div>
+        </div>
+        <div class="scene-footnote">
+          拖动旋转 · 滚轮缩放 · 右键平移。月球采用 EQJ 星历近似叠加；目标由公开 OMM/TLE 传播，仅用于几何展示与研究分析。
+        </div>
+      </section>
+
+      <aside class="viewer-inspector" aria-label="轨道信息">
+        <div class="viewer-panel-heading">
+          <div><span class="section-kicker">INSPECTOR</span><h2>轨道信息</h2></div>
+        </div>
+        <div id="viewer-inspector-content" class="viewer-inspector-content">
+          <div class="inspector-empty"><strong>尚未选择目标</strong><span>从左侧添加一个或多个目标。</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="viewer-method-note">
+      <strong>模型边界：</strong>SGP4 结果原生属于 TEME。第一版的月球位置来自 J2000 平赤道坐标（EQJ），在 TEME 场景中作近似几何叠加；地月旋转系由显示时刻的地月位置和速度构造。页面不代表高精度轨道确定结果。
+    </section>
+  </main>
+
+  <script type="module" src="./assets/orbit-viewer.js"></script>
+</body>
+</html>
+

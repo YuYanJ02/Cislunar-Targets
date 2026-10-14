@@ -58,6 +58,24 @@ a { color: var(--cyan); }
   position: relative;
 }
 
+.site-nav {
+  width: min(1540px, calc(100% - 48px));
+  margin: -14px auto 22px;
+  position: relative;
+  display: flex;
+  gap: 6px;
+}
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 12px;
+}
+.site-nav a:hover { color: var(--text); border-color: var(--line); }
+.site-nav a.active { color: var(--cyan); background: var(--cyan-soft); border-color: rgba(80,213,222,.22); }
+
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -244,6 +262,7 @@ tbody tr.selected { box-shadow: inset 3px 0 0 var(--cyan); }
 
 @media (max-width: 720px) {
   .site-header, main { width: min(100% - 24px, 1540px); }
+  .site-nav { width: min(100% - 24px, 1540px); }
   .site-header { align-items: flex-start; padding-top: 28px; }
   .brand-mark { width: 48px; height: 48px; }
   .brand-mark::after { left: 16px; top: 17px; width: 16px; height: 16px; }
