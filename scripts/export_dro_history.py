@@ -151,7 +151,9 @@ def main() -> None:
         print(f"Full-history verification: {len(payload)} rows")
         session.get(f"{BASE_URL}/ajaxauth/logout", timeout=30)
 
-    deduplicated = {row_key(row): row for row in all_rows}
+    invalid_rows = [row for row in all_rows if str(row.get("NORAD_CAT_ID", "")) not in TARGETS]
+    valid_rows = [row for row in all_rows if str(row.get("NORAD_CAT_ID", "")) in TARGETS]
+    deduplicated = {row_key(row): row for row in valid_rows}
     rows = sorted(
         deduplicated.values(),
         key=lambda row: (int(row.get("NORAD_CAT_ID", 0)), str(row.get("EPOCH", ""))),
@@ -161,7 +163,8 @@ def main() -> None:
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "query_start": start.isoformat(),
         "query_end_exclusive": end_exclusive.isoformat(),
-        "raw_rows": len(all_rows),
+        "raw_rows": len(valid_rows),
+        "invalid_response_rows": len(invalid_rows),
         "deduplicated_rows": len(rows),
         "queries": queries,
         "targets": {},
