@@ -42,6 +42,14 @@ def query_path(norad_ids: str, start: date, end_exclusive: date) -> str:
     )
 
 
+def full_history_path(norad_ids: str) -> str:
+    return (
+        "/basicspacedata/query/class/gp_history/"
+        f"NORAD_CAT_ID/{norad_ids}/"
+        "orderby/NORAD_CAT_ID,EPOCH,CREATION_DATE/limit/100000/format/json"
+    )
+
+
 def row_key(row: dict[str, Any]) -> tuple[str, str, str, str, str]:
     return (
         str(row.get("NORAD_CAT_ID", "")),
@@ -129,6 +137,18 @@ def main() -> None:
             print(f"Interval {index}/{len(intervals)}: {left}--{right}, {len(payload)} rows")
             if index < len(intervals):
                 time.sleep(args.sleep_seconds)
+        # Independent full-history request verifies that monthly slicing has not
+        # dropped records at interval boundaries or because of query parsing.
+        time.sleep(args.sleep_seconds)
+        path = full_history_path(identifiers)
+        response = session.get(f"{BASE_URL}{path}", timeout=180)
+        response.raise_for_status()
+        payload = response.json()
+        if not isinstance(payload, list):
+            raise RuntimeError("Space-Track full GP_HISTORY response is not a JSON list")
+        all_rows.extend(item for item in payload if isinstance(item, dict))
+        queries.append({"mode": "full_history_verification", "rows": len(payload)})
+        print(f"Full-history verification: {len(payload)} rows")
         session.get(f"{BASE_URL}/ajaxauth/logout", timeout=30)
 
     deduplicated = {row_key(row): row for row in all_rows}
