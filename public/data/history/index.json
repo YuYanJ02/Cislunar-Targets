@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-10-14T07:41:41.822332Z",
+  "generated_at_utc": "2026-10-14T09:20:17.573343Z",
   "bucket_count": 64,
   "completed_spacetrack_months": [
     "2026-09"
   ],
   "target_count": 680,
   "record_count": 92792,
-  "skipped_record_count": 0,
+  "skipped_record_count": 1,
   "targets": {
     "COSPAR:2019-042A": {
       "name": "19042a",
