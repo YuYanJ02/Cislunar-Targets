@@ -27,7 +27,7 @@ jobs:
         env:
           SPACETRACK_USERNAME: ${{ secrets.SPACETRACK_USERNAME }}
           SPACETRACK_PASSWORD: ${{ secrets.SPACETRACK_PASSWORD }}
-        run: python scripts/export_dro_history.py --output dro-history --start 2024-03-01
+        run: python scripts/export_dro_history.py --output dro-history --start 2023-01-01
       - name: Upload private analysis input
         uses: actions/upload-artifact@v4
         with:
