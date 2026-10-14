@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-10-13T13:20:28.529377Z",
+  "generated_at_utc": "2026-10-14T05:03:18.275058Z",
   "bucket_count": 64,
   "completed_spacetrack_months": [
     "2026-09"
   ],
   "target_count": 680,
-  "record_count": 92791,
+  "record_count": 92792,
   "skipped_record_count": 0,
   "targets": {
     "COSPAR:2019-042A": {
@@ -1532,18 +1532,18 @@
       "name": "RADUGA 1-7",
       "norad_cat_id": "28194",
       "cospar_id": "2004-010A",
-      "count": 25,
+      "count": 26,
       "earliest_epoch_utc": "2026-09-09T00:27:16.225920",
       "latest_epoch_utc": "2026-09-30T23:32:16.819008",
       "source_counts": {
-        "spacetrack": 25
+        "spacetrack": 26
       },
       "chunks": [
         {
           "path": "chunks/spacetrack/2026-09/bucket-25.json.gz",
           "source": "spacetrack",
           "period": "2026-09",
-          "count": 25
+          "count": 26
         }
       ]
     },
