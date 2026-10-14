@@ -1,0 +1,38 @@
+name: Export DRO-A and DRO-B Space-Track history
+
+# Data is uploaded as a short-lived private Actions artifact. It is not
+# committed to the public repository.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/export-dro-history.yml"
+      - "scripts/export_dro_history.py"
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Download bounded GP_HISTORY data
+        env:
+          SPACETRACK_USERNAME: ${{ secrets.SPACETRACK_USERNAME }}
+          SPACETRACK_PASSWORD: ${{ secrets.SPACETRACK_PASSWORD }}
+        run: python scripts/export_dro_history.py --output dro-history --start 2024-03-01
+      - name: Upload private analysis input
+        uses: actions/upload-artifact@v4
+        with:
+          name: dro-history
+          path: dro-history/
+          if-no-files-found: error
+          retention-days: 7
+
