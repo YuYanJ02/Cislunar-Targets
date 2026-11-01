@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "start_month": "2026-09",
-  "updated_at_utc": "2026-10-13T13:21:27.109655Z",
+  "updated_at_utc": "2026-11-01T10:47:09.976900Z",
   "months": [
     {
       "month": "2026-09",
@@ -9,6 +9,14 @@
       "end_epoch": "2026-09-30",
       "completed_at_utc": "2026-10-13T13:21:27.097281Z",
       "target_count": 690,
+      "status": "complete"
+    },
+    {
+      "month": "2026-10",
+      "start_epoch": "2026-10-01",
+      "end_epoch": "2026-10-31",
+      "completed_at_utc": "2026-11-01T10:47:09.955298Z",
+      "target_count": 725,
       "status": "complete"
     }
   ]
