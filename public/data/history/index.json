@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-11-01T10:46:05.505228Z",
+  "generated_at_utc": "2026-11-02T09:34:08.344777Z",
   "bucket_count": 64,
   "completed_spacetrack_months": [
     "2026-09",
     "2026-10"
   ],
   "target_count": 732,
-  "record_count": 147190,
+  "record_count": 147198,
   "skipped_record_count": 1,
   "targets": {
     "COSPAR:2019-042A": {
@@ -12435,11 +12435,11 @@
       "name": "USA 283",
       "norad_cat_id": "43339",
       "cospar_id": "2018-036A",
-      "count": 18,
+      "count": 19,
       "earliest_epoch_utc": "2026-09-02T12:29:38.771232",
-      "latest_epoch_utc": "2026-10-29T06:59:48.883200",
+      "latest_epoch_utc": "2026-10-31T18:51:51.688224",
       "source_counts": {
-        "spacetrack": 18
+        "spacetrack": 19
       },
       "chunks": [
         {
@@ -12452,7 +12452,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-21.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 8
+          "count": 9
         }
       ]
     },
@@ -14941,11 +14941,11 @@
       "name": "INMARSAT 6-F1",
       "norad_cat_id": "50319",
       "cospar_id": "2021-128A",
-      "count": 152,
+      "count": 153,
       "earliest_epoch_utc": "2026-09-01T11:25:34.912128",
       "latest_epoch_utc": "2026-10-31T23:45:26.426016",
       "source_counts": {
-        "spacetrack": 152
+        "spacetrack": 153
       },
       "chunks": [
         {
@@ -14958,7 +14958,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-33.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 61
+          "count": 62
         }
       ]
     },
@@ -15585,11 +15585,11 @@
       "name": "GALAXY 32",
       "norad_cat_id": "54244",
       "cospar_id": "2022-153B",
-      "count": 165,
+      "count": 166,
       "earliest_epoch_utc": "2026-09-01T03:45:11.562048",
-      "latest_epoch_utc": "2026-10-31T22:55:38.696736",
+      "latest_epoch_utc": "2026-10-31T22:55:38.697600",
       "source_counts": {
-        "spacetrack": 165
+        "spacetrack": 166
       },
       "chunks": [
         {
@@ -15602,7 +15602,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-51.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 69
+          "count": 70
         }
       ]
     },
@@ -15842,11 +15842,11 @@
       "name": "USA 342",
       "norad_cat_id": "55263",
       "cospar_id": "2023-008A",
-      "count": 18,
+      "count": 19,
       "earliest_epoch_utc": "2026-09-02T05:57:38.196864",
-      "latest_epoch_utc": "2026-10-29T06:28:21.896832",
+      "latest_epoch_utc": "2026-10-31T18:20:24.700992",
       "source_counts": {
-        "spacetrack": 18
+        "spacetrack": 19
       },
       "chunks": [
         {
@@ -15859,7 +15859,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-26.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 8
+          "count": 9
         }
       ]
     },
@@ -16061,11 +16061,11 @@
       "name": "INTELSAT 40E",
       "norad_cat_id": "56174",
       "cospar_id": "2023-052A",
-      "count": 146,
+      "count": 147,
       "earliest_epoch_utc": "2026-09-01T02:53:38.860224",
-      "latest_epoch_utc": "2026-10-31T22:55:38.696736",
+      "latest_epoch_utc": "2026-10-31T22:55:38.697600",
       "source_counts": {
-        "spacetrack": 146
+        "spacetrack": 147
       },
       "chunks": [
         {
@@ -16078,7 +16078,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-32.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 63
+          "count": 64
         }
       ]
     },
@@ -16286,11 +16286,11 @@
       "name": "H2SAT",
       "norad_cat_id": "57213",
       "cospar_id": "2023-093A",
-      "count": 86,
+      "count": 87,
       "earliest_epoch_utc": "2026-09-01T01:16:07.872096",
-      "latest_epoch_utc": "2026-10-30T21:20:19.720896",
+      "latest_epoch_utc": "2026-10-31T21:16:22.889856",
       "source_counts": {
-        "spacetrack": 86
+        "spacetrack": 87
       },
       "chunks": [
         {
@@ -16303,7 +16303,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-41.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 43
+          "count": 44
         }
       ]
     },
@@ -16311,11 +16311,11 @@
       "name": "SYRACUSE 4B",
       "norad_cat_id": "57214",
       "cospar_id": "2023-093B",
-      "count": 95,
+      "count": 96,
       "earliest_epoch_utc": "2026-09-01T01:44:45.505824",
-      "latest_epoch_utc": "2026-10-30T21:48:55.773504",
+      "latest_epoch_utc": "2026-10-31T21:44:58.644384",
       "source_counts": {
-        "spacetrack": 95
+        "spacetrack": 96
       },
       "chunks": [
         {
@@ -16328,7 +16328,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-00.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 50
+          "count": 51
         }
       ]
     },
@@ -17877,11 +17877,11 @@
       "name": "SPAINSAT NG II",
       "norad_cat_id": "66144",
       "cospar_id": "2025-239A",
-      "count": 63,
+      "count": 64,
       "earliest_epoch_utc": "2026-09-01T08:01:44.516064",
-      "latest_epoch_utc": "2026-10-30T07:33:11.882304",
+      "latest_epoch_utc": "2026-10-31T08:23:13.977312",
       "source_counts": {
-        "spacetrack": 63
+        "spacetrack": 64
       },
       "chunks": [
         {
@@ -17894,7 +17894,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-21.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 22
+          "count": 23
         }
       ]
     },
