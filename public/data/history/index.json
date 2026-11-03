@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-11-02T09:34:08.344777Z",
+  "generated_at_utc": "2026-11-03T09:36:42.173541Z",
   "bucket_count": 64,
   "completed_spacetrack_months": [
     "2026-09",
     "2026-10"
   ],
   "target_count": 732,
-  "record_count": 147198,
+  "record_count": 147199,
   "skipped_record_count": 1,
   "targets": {
     "COSPAR:2019-042A": {
@@ -18196,12 +18196,12 @@
       "name": "SMILE",
       "norad_cat_id": "69123",
       "cospar_id": "2026-109A",
-      "count": 249,
+      "count": 250,
       "earliest_epoch_utc": "2026-06-22T11:58:50.816064Z",
       "latest_epoch_utc": "2026-12-31T11:58:50.816064Z",
       "source_counts": {
         "bill_gray": 193,
-        "spacetrack": 56
+        "spacetrack": 57
       },
       "chunks": [
         {
@@ -18220,7 +18220,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-58.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 32
+          "count": 33
         }
       ]
     },
