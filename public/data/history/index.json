@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-11-12T09:52:57.512673Z",
+  "generated_at_utc": "2026-11-13T09:35:15.879114Z",
   "bucket_count": 64,
   "completed_spacetrack_months": [
     "2026-09",
     "2026-10"
   ],
   "target_count": 732,
-  "record_count": 147202,
+  "record_count": 147205,
   "skipped_record_count": 1,
   "targets": {
     "COSPAR:2019-042A": {
@@ -10540,18 +10540,18 @@
       "name": "IRNSS 1E",
       "norad_cat_id": "41241",
       "cospar_id": "2016-003A",
-      "count": 26,
+      "count": 27,
       "earliest_epoch_utc": "2026-10-01T19:48:18.696096",
       "latest_epoch_utc": "2026-10-28T17:52:09.460416",
       "source_counts": {
-        "spacetrack": 26
+        "spacetrack": 27
       },
       "chunks": [
         {
           "path": "chunks/spacetrack/2026-10/bucket-32.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 26
+          "count": 27
         }
       ]
     },
@@ -11691,11 +11691,11 @@
       "name": "QZS-2",
       "norad_cat_id": "42738",
       "cospar_id": "2017-028A",
-      "count": 69,
+      "count": 70,
       "earliest_epoch_utc": "2026-09-01T07:33:38.583360",
       "latest_epoch_utc": "2026-10-17T15:21:52.982784",
       "source_counts": {
-        "spacetrack": 69
+        "spacetrack": 70
       },
       "chunks": [
         {
@@ -11708,7 +11708,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-54.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 28
+          "count": 29
         }
       ]
     },
@@ -13672,11 +13672,11 @@
       "name": "BEIDOU 3 IGSO-3",
       "norad_cat_id": "44709",
       "cospar_id": "2019-073A",
-      "count": 84,
+      "count": 85,
       "earliest_epoch_utc": "2026-09-05T11:44:05.845920",
       "latest_epoch_utc": "2026-10-29T08:22:36.087456",
       "source_counts": {
-        "spacetrack": 84
+        "spacetrack": 85
       },
       "chunks": [
         {
@@ -13689,7 +13689,7 @@
           "path": "chunks/spacetrack/2026-10/bucket-44.json.gz",
           "source": "spacetrack",
           "period": "2026-10",
-          "count": 42
+          "count": 43
         }
       ]
     },
