@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at_utc": "2026-11-16T09:49:22.838855Z",
+  "updated_at_utc": "2026-11-17T10:46:42.633002Z",
   "shards": [
     {
       "path": "shards/2026/10/history-20261013T130858Z-5a4698a799.jsonl.gz",
@@ -509,6 +509,19 @@
       "sha256": "bbf427e8b69b8639f4fb8b6b1e97dd5a99e72efda92374d1b68d7a89baf1b769",
       "uncompressed_bytes": 948584,
       "compressed_bytes": 130089
+    },
+    {
+      "path": "shards/2026/11/history-20261117T104642Z-b88ecf3f2b.jsonl.gz",
+      "created_at_utc": "2026-11-17T10:46:42.633002Z",
+      "record_count": 660,
+      "source_counts": {
+        "spacetrack": 660
+      },
+      "min_epoch_utc": "2026-11-12T16:26:02.406048",
+      "max_epoch_utc": "2026-11-17T08:34:04.601280",
+      "sha256": "b88ecf3f2bd99eef17e4d8ec7ac152d6cc6194d45867da339ac0de9ba98e81d2",
+      "uncompressed_bytes": 972542,
+      "compressed_bytes": 134854
     }
   ]
 }
